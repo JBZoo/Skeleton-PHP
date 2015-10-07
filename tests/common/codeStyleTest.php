@@ -1,6 +1,6 @@
 <?php
 /**
- * __PACKAGE__
+ * JBZoo __PACKAGE__
  *
  * This file is part of the JBZoo CCK package.
  * For the full copyright and license information, please view the LICENSE
@@ -15,10 +15,10 @@
 namespace JBZoo\__PACKAGE__;
 
 /**
- * Class FilesTest
+ * Class CodeStyleTest
  * @package JBZoo\__PACKAGE__
  */
-class FilesTest extends PHPUnit
+class CodeStyleTest extends PHPUnit
 {
     protected $le = "\n";
 
@@ -37,7 +37,7 @@ class FilesTest extends PHPUnit
     protected $validHeader = array(
         '<?php',
         '/**',
-        ' * __PACKAGE__',
+        ' * JBZoo __PACKAGE__',
         ' *',
         ' * This file is part of the JBZoo CCK package.',
         ' * For the full copyright and license information, please view the LICENSE',

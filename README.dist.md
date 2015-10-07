@@ -1,4 +1,4 @@
-# __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)
+# JBZoo __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)
 
 #### PHP library description
 
