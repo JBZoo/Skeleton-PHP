@@ -25,6 +25,9 @@ class PHPUnit extends \PHPUnit_Framework_TestCase
     protected static $times = array();
     protected static $memories = array();
 
+    /**
+     * @var array
+     */
     protected $excludeList = array(
         '.',
         '..',
@@ -57,6 +60,7 @@ class PHPUnit extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Simple profiler
      * @param int $count
      * @return array
      */
@@ -92,6 +96,13 @@ class PHPUnit extends \PHPUnit_Framework_TestCase
         return $result;
     }
 
+    /**
+     * Get file list in directory
+     * @param       $dir
+     * @param null  $filter
+     * @param array $results
+     * @return array
+     */
     protected function getFileList($dir, $filter = null, &$results = array())
     {
         $files = scandir($dir);
@@ -100,8 +111,9 @@ class PHPUnit extends \PHPUnit_Framework_TestCase
             $path = $dir . DIRECTORY_SEPARATOR . $value;
 
             if (!is_dir($path) && !in_array($value, $this->excludeList, true)) {
+
                 if ($filter) {
-                    if (preg_match($filter, $path)) {
+                    if (preg_match('#' . $filter . '#iu', $path)) {
                         $results[] = $path;
                     }
                 } else {
@@ -116,6 +128,11 @@ class PHPUnit extends \PHPUnit_Framework_TestCase
         return $results;
     }
 
+    /**
+     * Binary save to open file
+     * @param $path
+     * @return null|string
+     */
     protected function openFile($path)
     {
         $contents = null;

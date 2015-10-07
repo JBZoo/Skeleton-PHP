@@ -17,22 +17,22 @@ namespace JBZoo\__PACKAGE__;
 
 // @codingStandardsIgnoreFile
 // @codeCoverageIgnoreStart
+if (!defined('ROOT_PATH')) { // for PHPUnit process isolation
+    define('ROOT_PATH', realpath('.'));
+}
 
 // main autoload
-if ($autoload = realpath('./vendor/autoload.php')) {
+if ($autoload = realpath(ROOT_PATH . '/vendor/autoload.php')) {
     require_once $autoload;
 } else {
     echo 'Please execute "composer install --no-dev" !' . PHP_EOL;
     exit(1);
 }
 
-if (!defined('ROOT_PATH')) { // for PHPUnit process isolation
-    define('ROOT_PATH', realpath('.'));
-}
 
 // test tools and important includes
-require_once ROOT_PATH . '/phpunit.php';
-require_once ROOT_PATH . '/fixtures.php';
+require_once ROOT_PATH . '/tests/phpunit.php';
+require_once ROOT_PATH . '/tests/fixtures.php';
 
 
 // @codeCoverageIgnoreEnd

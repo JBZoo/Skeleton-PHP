@@ -21,8 +21,8 @@ namespace JBZoo\__PACKAGE__;
 class BaseTest extends PHPUnit
 {
 
-    public function testBase()
+    public function testShouldDoSomeStreetMagic()
     {
-
+        self::assertEquals('street magic', 'street magic');
     }
 }

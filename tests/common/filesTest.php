@@ -25,11 +25,15 @@ class FilesTest extends PHPUnit
     protected $replace = array(
         '__LINK__'       => 'https://github.com/JBZoo/__PACKAGE__',
         '__NAMESPACE__'  => 'JBZoo\__PACKAGE__',
-        '__PACKAGE__'    => 'LibraryName', // change me!
+        '__PACKAGE__'    => '__PACKAGE__', // change me!
         '__LICENSE__'    => 'MIT',
         '__COPYRIGHTS__' => 'Copyright (C) JBZoo.com,  All rights reserved.',
     );
 
+    /**
+     * Valid copyright header
+     * @var array
+     */
     protected $validHeader = array(
         '<?php',
         '/**',
@@ -45,6 +49,10 @@ class FilesTest extends PHPUnit
         ' * @link      __LINK__',
     );
 
+    /**
+     * Ignore list for
+     * @var array
+     */
     protected $excludeList = array(
         '.',
         '..',
