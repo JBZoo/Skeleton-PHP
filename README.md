@@ -1,4 +1,4 @@
-# Skeleton (PHP) [![Build Status](https://travis-ci.org/JBZoo/SkeletonPHP.svg?branch=master)](https://travis-ci.org/JBZoo/SkeletonPHP)
+# Skeleton (PHP) [![Build Status](https://travis-ci.org/JBZoo/Skeleton-PHP.svg?branch=master)](https://travis-ci.org/JBZoo/Skeleton-PHP)
 
 Это не библиотека, а лишь заготовка. Она призвана навести порядок в головах программистов и стандартизировать разработку open-source библиотек для JBZoo.
 
