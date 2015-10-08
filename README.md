@@ -18,7 +18,7 @@
 ### Обязательные требования к библиотеке
 
  * Опубликована на [Packagist.org](https://packagist.org/packages/JBZoo)
- * [Travis](https://travis-ci.org/JBZoo) показазывает что билды всех версиq PHP успешно прошли тестирование.
+ * [Travis](https://travis-ci.org/JBZoo) показазывает что билды всех версий PHP успешно прошли тестирование.
  * Покрытие unit-тестами не ниже 80-95% (зависит от типа и важности библиотеки).
  * Сделан хотя бы один тег  - "1.0.0"
  * Нумерация версий [по стандартнам composer](https://getcomposer.org/doc/articles/versions.md)
