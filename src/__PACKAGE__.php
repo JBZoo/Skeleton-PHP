@@ -21,4 +21,12 @@ namespace JBZoo\__PACKAGE__;
 class __PACKAGE__
 {
 
+    /**
+     * @return string
+     */
+    public function doSomeStreetMagic()
+    {
+        return 'street magic';
+    }
+
 }

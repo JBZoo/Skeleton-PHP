@@ -23,6 +23,15 @@ class BaseTest extends PHPUnit
 
     public function testShouldDoSomeStreetMagic()
     {
-        self::assertEquals('street magic', 'street magic');
+        $obj = new __PACKAGE__();
+        self::assertEquals('street magic', $obj->doSomeStreetMagic());
+    }
+
+    /**
+     * @expectedException \JBZoo\__PACKAGE__\Exception
+     */
+    public function testShouldShowException()
+    {
+        throw new Exception('Test message');
     }
 }
