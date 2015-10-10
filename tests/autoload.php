@@ -25,7 +25,7 @@ if (!defined('ROOT_PATH')) { // for PHPUnit process isolation
 if ($autoload = realpath(ROOT_PATH . '/vendor/autoload.php')) {
     require_once $autoload;
 } else {
-    echo 'Please execute "composer install --no-dev" !' . PHP_EOL;
+    echo 'Please execute "composer update" !' . PHP_EOL;
     exit(1);
 }
 
