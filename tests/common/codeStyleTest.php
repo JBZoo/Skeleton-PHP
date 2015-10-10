@@ -1,22 +1,22 @@
 <?php
 /**
- * JBZoo __PACKAGE__
+ * JBZoo ___PACKAGE___
  *
  * This file is part of the JBZoo CCK package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   __PACKAGE__
+ * @package   ___PACKAGE___
  * @license   MIT
  * @copyright Copyright (C) JBZoo.com,  All rights reserved.
- * @link      https://github.com/JBZoo/__PACKAGE__
+ * @link      https://github.com/JBZoo/___PACKAGE___
  */
 
-namespace JBZoo\__PACKAGE__;
+namespace JBZoo\___PACKAGE___;
 
 /**
  * Class CodeStyleTest
- * @package JBZoo\__PACKAGE__
+ * @package JBZoo\___PACKAGE___
  */
 class CodeStyleTest extends PHPUnit
 {
@@ -25,7 +25,7 @@ class CodeStyleTest extends PHPUnit
     protected $replace = array(
         '__LINK__'       => 'https://github.com/JBZoo/__PACKAGE__',
         '__NAMESPACE__'  => 'JBZoo\__PACKAGE__',
-        '__PACKAGE__'    => '__PACKAGE__', // change me!
+        '__PACKAGE__'    => '___PACKAGE___', // change me!
         '__LICENSE__'    => 'MIT',
         '__COPYRIGHTS__' => 'Copyright (C) JBZoo.com,  All rights reserved.',
     );
