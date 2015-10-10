@@ -1,33 +1,33 @@
 <?php
 /**
- * JBZoo ___PACKAGE___
+ * JBZoo __PACKAGE__
  *
  * This file is part of the JBZoo CCK package.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   ___PACKAGE___
+ * @package   __PACKAGE__
  * @license   MIT
  * @copyright Copyright (C) JBZoo.com,  All rights reserved.
- * @link      https://github.com/JBZoo/___PACKAGE___
+ * @link      https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\___PACKAGE___;
+namespace JBZoo\__PACKAGE__;
 
 /**
  * Class CodeStyleTest
- * @package JBZoo\___PACKAGE___
+ * @package JBZoo\__PACKAGE__
  */
 class CodeStyleTest extends PHPUnit
 {
     protected $le = "\n";
 
     protected $replace = array(
-        '__LINK__'       => 'https://github.com/JBZoo/__PACKAGE__',
-        '__NAMESPACE__'  => 'JBZoo\__PACKAGE__',
-        '__PACKAGE__'    => '___PACKAGE___', // change me!
-        '__LICENSE__'    => 'MIT',
-        '__COPYRIGHTS__' => 'Copyright (C) JBZoo.com,  All rights reserved.',
+        '_LINK_'       => 'https://github.com/JBZoo/_PACKAGE_',
+        '_NAMESPACE_'  => 'JBZoo\_PACKAGE_',
+        '_PACKAGE_'    => '__PACKAGE__', // change me!
+        '_LICENSE_'    => 'MIT',
+        '_COPYRIGHTS_' => 'Copyright (C) JBZoo.com,  All rights reserved.',
     );
 
     /**
@@ -37,16 +37,16 @@ class CodeStyleTest extends PHPUnit
     protected $validHeader = array(
         '<?php',
         '/**',
-        ' * JBZoo __PACKAGE__',
+        ' * JBZoo _PACKAGE_',
         ' *',
         ' * This file is part of the JBZoo CCK package.',
         ' * For the full copyright and license information, please view the LICENSE',
         ' * file that was distributed with this source code.',
         ' *',
-        ' * @package   __PACKAGE__',
-        ' * @license   __LICENSE__',
-        ' * @copyright __COPYRIGHTS__',
-        ' * @link      __LINK__',
+        ' * @package   _PACKAGE_',
+        ' * @license   _LICENSE_',
+        ' * @copyright _COPYRIGHTS_',
+        ' * @link      _LINK_',
     );
 
     /**
