@@ -103,8 +103,8 @@ class CodeStyleTest extends PHPUnit
 
             // build copyrights
             $validHeader = $this->validHeader;
-            if (isset($this->replace['__AUTHOR__'])) {
-                $validHeader[] = ' * @author    __AUTHOR__';
+            if (isset($this->replace['_AUTHOR_'])) {
+                $validHeader[] = ' * @author    _AUTHOR_';
             }
             $validHeader[] = ' */';
 
