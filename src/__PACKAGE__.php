@@ -28,5 +28,4 @@ class __PACKAGE__
     {
         return 'street magic';
     }
-
 }
