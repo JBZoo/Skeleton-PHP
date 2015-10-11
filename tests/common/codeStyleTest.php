@@ -108,11 +108,10 @@ class CodeStyleTest extends PHPUnit
             }
             $validHeader[] = ' */';
 
-            $namespace = $this->replaceCopyright('namespace __NAMESPACE__;');
+            $namespace = $this->replaceCopyright('namespace _NAMESPACE_');
             if (strpos($content, $namespace)) {
                 $validHeader[] = '';
-                $validHeader[] = 'namespace __NAMESPACE__';
-                $validHeader[] = '';
+                $validHeader[] = 'namespace _NAMESPACE_';
             }
 
             $valid = $this->replaceCopyright(implode($validHeader, $this->le));
