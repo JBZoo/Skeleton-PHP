@@ -10,7 +10,6 @@ $config = array(
         '..',
         '.idea',
         '.git',
-        'codeStyleTest.php',
         pathinfo(__FILE__, PATHINFO_BASENAME),
     ),
     'defines' => array(
