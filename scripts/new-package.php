@@ -26,11 +26,15 @@ global $config;
 $config = array(
     'root'    => realpath('../'),
     'exclude' => array(
-        '.', '..', '.idea', '.git',
+        '.',
+        '..',
+        '.idea',
+        '.git',
         pathinfo(__FILE__, PATHINFO_BASENAME),
     ),
     'defines' => array(
         '__PACKAGE__' => $packageName,
+        '__package__' => strtolower($packageName),
     ),
 );
 
