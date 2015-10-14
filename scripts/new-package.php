@@ -1,21 +1,36 @@
 <?php
+/**
+ * JBZoo __PACKAGE__
+ *
+ * This file is part of the JBZoo CCK package.
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @package   __PACKAGE__
+ * @license   MIT
+ * @copyright Copyright (C) JBZoo.com,  All rights reserved.
+ * @link      https://github.com/JBZoo/__PACKAGE__
+ * @author    Denis Smetannikov <denis@jbzoo.com>
+ */
 
+
+$packageName = '';
+
+
+if (!$packageName) {
+    throw new Exception('Undefined package name! Plz, check config');
+}
 
 global $config;
 
 $config = array(
     'root'    => realpath('../'),
     'exclude' => array(
-        '.',
-        '..',
-        '.idea',
-        '.git',
-        'codeStyleTest.php',
+        '.', '..', '.idea', '.git',
         pathinfo(__FILE__, PATHINFO_BASENAME),
     ),
     'defines' => array(
-        '__PACKAGE__'    => 'SqlBuilder',
-        '__CLASS_NAME__' => 'SqlBuilder',
+        '__PACKAGE__' => $packageName,
     ),
 );
 
@@ -72,7 +87,8 @@ function getFileList($dir, $filter = null, &$results = array())
     return $results;
 }
 
-/********** Replace all files **********/
+
+/********** Replace all files *****************************************************************************************/
 $list = getFileList($config['root']);
 foreach ($list as $file) {
     $content = openFile($file);
@@ -84,18 +100,22 @@ foreach ($list as $file) {
     file_put_contents($file, $content);
 }
 
-/********** Replace test file **********/
+
+/********** Replace test file *****************************************************************************************/
 $commonTest = $config['root'] . '/tests/common/codeStyleTest.php';
 $content    = openFile($commonTest);
 $content    = str_replace('___PACKAGE___', $config['defines']['__PACKAGE__'], $content);
 file_put_contents($commonTest, $content);
 
-/********** Change Readme file **********/
+
+/********** Change Readme file ****************************************************************************************/
 rename($config['root'] . '/README.dist.md', $config['root'] . '/README.md');
 
-/********** Rename main file **********/
+
+/********** Rename main file ******************************************************************************************/
 rename($config['root'] . '/src/__PACKAGE__.php', $config['root'] . '/src/' . $config['defines']['__PACKAGE__'] . '.php');
 
-/********** Composer info! **********/
+
+/********** Useful info! **********************************************************************************************/
 echo "EXCECUTE COMMAND --> 'composer update'" . PHP_EOL;
 echo "EXCECUTE COMMAND --> 'phpunit'";
