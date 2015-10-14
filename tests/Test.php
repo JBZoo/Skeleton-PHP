@@ -12,19 +12,22 @@
  * @link      https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__PACKAGE__;
+namespace JBZoo\PHPUnit;
+
+use JBZoo\__PACKAGE__\__PACKAGE__;
+use JBZoo\__PACKAGE__\Exception;
 
 /**
- * Class Exception
- * @package JBZoo\__PACKAGE__
+ * Class Test
+ * @package JBZoo\PHPUnit
  */
-class BaseTest extends PHPUnit
+class Test extends PHPUnit
 {
 
     public function testShouldDoSomeStreetMagic()
     {
         $obj = new __PACKAGE__();
-        self::assertEquals('street magic', $obj->doSomeStreetMagic());
+        is('street magic', $obj->doSomeStreetMagic());
     }
 
     /**

@@ -29,10 +29,6 @@ if ($autoload = realpath(ROOT_PATH . '/vendor/autoload.php')) {
     exit(1);
 }
 
-
-// test tools and important includes
-require_once ROOT_PATH . '/tests/phpunit.php';
 require_once ROOT_PATH . '/tests/fixtures.php';
-
 
 // @codeCoverageIgnoreEnd

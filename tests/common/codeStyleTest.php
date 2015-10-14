@@ -12,11 +12,11 @@
  * @link      https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__PACKAGE__;
+namespace JBZoo\PHPUnit;
 
 /**
  * Class CodeStyleTest
- * @package JBZoo\__PACKAGE__
+ * @package JBZoo\PHPUnit
  */
 class CodeStyleTest extends PHPUnit
 {
@@ -53,15 +53,15 @@ class CodeStyleTest extends PHPUnit
      * Ignore list for
      * @var array
      */
-    protected $excludeList = array(
+    protected $excludeFiles = array(
         '.',
         '..',
         '.idea',
         '.git',
         'build',
         'vendor',
-        'composer.phar',
         'composer.lock',
+        'codeStyleTest.php'
     );
 
     /**
@@ -87,7 +87,7 @@ class CodeStyleTest extends PHPUnit
 
         foreach ($files as $file) {
             $content = $this->openFile($file);
-            self::assertNotContains("\r", $content);
+            isNotContain("\r", $content);
         }
     }
 
@@ -116,7 +116,7 @@ class CodeStyleTest extends PHPUnit
             }
 
             $valid = $this->replaceCopyright(implode($validHeader, $this->le));
-            self::assertContains($valid, $content, 'File has no valid header: ' . $file);
+            isContain($valid, $content, 'File has no valid header: ' . $file);
         }
     }
 
@@ -125,12 +125,11 @@ class CodeStyleTest extends PHPUnit
      */
     public function testCyrillic()
     {
-        $files = $this->getFileList(ROOT_PATH, '/src/.*\.php$');
+        $files = $this->getFileList(ROOT_PATH, '[/\\\\](src|tests)[/\\\\].*\.php$');
 
         foreach ($files as $file) {
             $content = $this->openFile($file);
-
-            self::assertEquals(0, preg_match('/[А-Яа-яЁё]/u', $content), 'File has no valid chars: ' . $file);
+            isNotLike('#[А-Яа-яЁё]#u', $content, 'File has no valid chars: ' . $file);
         }
     }
 

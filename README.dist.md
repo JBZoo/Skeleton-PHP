@@ -12,10 +12,10 @@
 require_once './vendor/autoload.php'; // composer autoload.php
 
 // Get needed classes
-use JBZoo\__PACKAGE__\__CLASS_NAME__;
+use JBZoo\__PACKAGE__\__PACKAGE__;
 
 // Just use it!
-$object = new __CLASS_NAME__();
+$object = new __PACKAGE__();
 $object->doSomeMagic(':)');
 ```
 
