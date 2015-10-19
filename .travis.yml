@@ -54,10 +54,10 @@ after_script:
         php vendor/bin/coveralls --verbose;
     fi;'
       
-  # Check JBZoo Coding standard
+  # Check code style standarts for ./src
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "5.6" ]; then
         curl -sS https://raw.githubusercontent.com/JBZoo/Misc/master/phpcs/JBZoo/ruleset.xml > ./build/phpcs_ruleset.xml;
-        php vendor/bin/phpcs ./src --standard=./build/phpcs_ruleset.xml --report=full;
+        php vendor/bin/phpcs --standard=./build/phpcs_ruleset.xml --report=full ./src;
     fi;'
   
   # Try to find copy-paste
