@@ -14,7 +14,7 @@
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\__PACKAGE__\__PACKAGE__;
+use JBZoo\__PACKAGE__\Package;
 
 /**
  * Class PerformanceTest
@@ -33,7 +33,7 @@ class PerformanceTest extends PHPUnit
         $this->startProfiler();
         for ($i = 0; $i < $this->_max; $i++) {
             // Your code
-            $obj = new __PACKAGE__();
+            $obj = new Package();
             is('street magic', $obj->doSomeStreetMagic());
             unset($obj);
             // Your code

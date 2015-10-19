@@ -14,7 +14,7 @@
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\__PACKAGE__\__PACKAGE__;
+use JBZoo\__PACKAGE__\Package;
 use JBZoo\__PACKAGE__\Exception;
 
 /**
@@ -26,7 +26,7 @@ class Test extends PHPUnit
 
     public function testShouldDoSomeStreetMagic()
     {
-        $obj = new __PACKAGE__();
+        $obj = new Package();
         is('street magic', $obj->doSomeStreetMagic());
     }
 

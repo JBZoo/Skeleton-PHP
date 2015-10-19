@@ -18,7 +18,7 @@ namespace JBZoo\__PACKAGE__;
  * Class __PACKAGE__
  * @package JBZoo\__PACKAGE__
  */
-class __PACKAGE__
+class Package
 {
 
     /**
