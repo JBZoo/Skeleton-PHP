@@ -32,9 +32,11 @@ class PerformanceTest extends PHPUnit
 
         $this->startProfiler();
         for ($i = 0; $i < $this->_max; $i++) {
+            // Your code
             $obj = new __PACKAGE__();
             is('street magic', $obj->doSomeStreetMagic());
             unset($obj);
+            // Your code
         }
 
         alert($this->loopProfiler($this->_max), 'Create - min');

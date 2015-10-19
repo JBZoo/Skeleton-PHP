@@ -20,5 +20,5 @@ namespace JBZoo\PHPUnit;
  */
 class CodeStyleTestTest extends Codestyle
 {
-    // Your CS checkings
+    // Your custom code style checking
 }
