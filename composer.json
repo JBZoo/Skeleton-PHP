@@ -4,7 +4,7 @@
     "description": "",
     "license": "MIT",
     "minimum-stability": "stable",
-    "keywords": [],
+    "keywords": ["skeleton", "travis", "phpunit", "composer", "github", "jbzoo", "packagist"],
     "authors": [
         {
             "name": "SmetDenis",
@@ -15,7 +15,7 @@
         "php": ">=5.3.10"
     },
     "require-dev": {
-        "jbzoo/phpunit": "^1.0"
+        "jbzoo/phpunit": "dev-master"
     },
     "autoload": {
         "psr-4": {

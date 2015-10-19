@@ -33,8 +33,8 @@ $config = array(
         pathinfo(__FILE__, PATHINFO_BASENAME),
     ),
     'defines' => array(
-        '__PACKAGE__' => $packageName,
-        '__package__' => strtolower($packageName),
+        '__PACKAGE__'        => $packageName,
+        'jbzoo/skeleton-php' => 'jbzoo/' . strtolower($packageName),
     ),
 );
 
@@ -74,7 +74,6 @@ function getFileList($dir, $filter = null, &$results = array())
         $path = $dir . DIRECTORY_SEPARATOR . $value;
 
         if (!is_dir($path) && !in_array($value, $config['exclude'], true)) {
-
             if ($filter) {
                 if (preg_match('#' . $filter . '#iu', $path)) {
                     $results[] = realpath($path);
@@ -113,11 +112,17 @@ file_put_contents($commonTest, $content);
 
 
 /********** Change Readme file ****************************************************************************************/
-rename($config['root'] . '/README.dist.md', $config['root'] . '/README.md');
+rename(
+    $config['root'] . '/README.dist.md',
+    $config['root'] . '/README.md'
+);
 
 
 /********** Rename main file ******************************************************************************************/
-rename($config['root'] . '/src/__PACKAGE__.php', $config['root'] . '/src/' . $config['defines']['__PACKAGE__'] . '.php');
+rename(
+    $config['root'] . '/src/__PACKAGE__.php',
+    $config['root'] . '/src/' . $config['defines']['__PACKAGE__'] . '.php'
+);
 
 
 /********** Useful info! **********************************************************************************************/

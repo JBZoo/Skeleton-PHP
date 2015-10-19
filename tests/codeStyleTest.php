@@ -12,20 +12,13 @@
  * @link      https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__PACKAGE__;
+namespace JBZoo\PHPUnit;
 
 /**
- * Class __PACKAGE__
- * @package JBZoo\__PACKAGE__
+ * Class CodeStyleTest
+ * @package JBZoo\PHPUnit
  */
-class __PACKAGE__
+class CodeStyleTestTest extends Codestyle
 {
-
-    /**
-     * @return string
-     */
-    public function doSomeStreetMagic()
-    {
-        return 'street magic';
-    }
+    // Your CS checkings
 }

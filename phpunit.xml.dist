@@ -14,6 +14,10 @@
          verbose="true"
         >
 
+    <php>
+        <env name="PACKAGE_NAME" value="__PACKAGE__"/>
+    </php>
+
     <testsuites>
         <testsuite name="JBZoo __PACKAGE__ suite">
             <directory suffix="Test.php">./tests</directory>

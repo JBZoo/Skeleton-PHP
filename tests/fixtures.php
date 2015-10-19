@@ -12,7 +12,7 @@
  * @link      https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__PACKAGE__;
+namespace JBZoo\PHPUnit;
 
 
 // @codingStandardsIgnoreFile
