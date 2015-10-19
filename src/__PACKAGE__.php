@@ -20,7 +20,6 @@ namespace JBZoo\__PACKAGE__;
  */
 class __PACKAGE__
 {
-
     /**
      * @return string
      */
@@ -28,4 +27,5 @@ class __PACKAGE__
     {
         return 'street magic';
     }
+
 }
