@@ -1,5 +1,8 @@
 # Skeleton (PHP) [![Build Status](https://travis-ci.org/JBZoo/Skeleton-PHP.svg?branch=master)](https://travis-ci.org/JBZoo/Skeleton-PHP)   [![Coverage Status](https://coveralls.io/repos/JBZoo/Skeleton-PHP/badge.svg?branch=master&service=github)](https://coveralls.io/github/JBZoo/Skeleton-PHP?branch=master)
 
+[![License](https://poser.pugx.org/JBZoo/Skeleton-PHP/license)](https://packagist.org/packages/JBZoo/Skeleton-PHP)
+[![Latest Stable Version](https://poser.pugx.org/JBZoo/Skeleton-PHP/v/stable)](https://packagist.org/packages/JBZoo/Skeleton-PHP)
+
 Это не библиотека, а лишь заготовка. Она призвана навести порядок в головах программистов и стандартизировать разработку open-source библиотек для JBZoo.
 
 **Все что тут написано, относится лишь к репозиториям на Github.com**
