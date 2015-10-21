@@ -104,13 +104,6 @@ foreach ($list as $file) {
 }
 
 
-/********** Replace test file *****************************************************************************************/
-$commonTest = $config['root'] . '/tests/common/codeStyleTest.php';
-$content    = openFile($commonTest);
-$content    = str_replace('___PACKAGE___', $config['defines']['__PACKAGE__'], $content);
-file_put_contents($commonTest, $content);
-
-
 /********** Change Readme file ****************************************************************************************/
 rename(
     $config['root'] . '/README.dist.md',
@@ -120,7 +113,7 @@ rename(
 
 /********** Rename main file ******************************************************************************************/
 rename(
-    $config['root'] . '/src/__PACKAGE__.php',
+    $config['root'] . '/src/Package.php',
     $config['root'] . '/src/' . $config['defines']['__PACKAGE__'] . '.php'
 );
 
