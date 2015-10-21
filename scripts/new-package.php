@@ -111,12 +111,6 @@ rename(
 );
 
 
-/********** Rename main file ******************************************************************************************/
-rename(
-    $config['root'] . '/src/Package.php',
-    $config['root'] . '/src/' . $config['defines']['__PACKAGE__'] . '.php'
-);
-
 
 /********** Useful info! **********************************************************************************************/
 echo "EXCECUTE COMMAND --> 'composer update'" . PHP_EOL;
