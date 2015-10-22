@@ -19,7 +19,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="JBZoo __PACKAGE__ suite">
+        <testsuite name="JBZoo __PACKAGE__ Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>
