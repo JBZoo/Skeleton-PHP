@@ -20,5 +20,5 @@ namespace JBZoo\PHPUnit;
  */
 class CodeStyleTestTest extends Codestyle
 {
-    // Your custom code style checking
+    protected $_packageName = "__PACKAGE__";
 }
