@@ -77,4 +77,4 @@ after_script:
     fi;'
 
 notifications:
-  slack: jbzoo:2cJooj2Me3nixtqZQAWFzvI0
+  slack: jbzoo:RPyzxVQZPuPhgvm1Q6fDvK3C
