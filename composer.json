@@ -16,7 +16,7 @@
         "php": ">=5.3.10"
     },
     "require-dev": {
-        "jbzoo/phpunit": "^1.0"
+        "jbzoo/phpunit": "1.0.x-dev"
     },
     "autoload": {
         "psr-4": {
