@@ -23,6 +23,11 @@
             "JBZoo\\__PACKAGE__\\": "src"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
     "support": {
         "issues": "https://github.com/JBZoo/__PACKAGE__/issues"
     }
