@@ -52,6 +52,7 @@ after_script:
         
         php vendor/bin/phploc ./src --no-interaction --verbose;
         
+        mkdir -p build/pdepend;
         php vendor/bin/pdepend
           --summary-xml=build/pdepend/summary.xml
           --jdepend-chart=build/pdepend/jdepend.svg
