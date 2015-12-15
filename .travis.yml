@@ -38,7 +38,7 @@ script:
   - php vendor/bin/phpunit;
 
   # Check PHP Code Standarts
-  - sh -c 'if [ "$TRAVIS_PHP_VERSION" = ""$PHP_TEST_VERSION" ]; then
+  - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "$PHP_TEST_VERSION" ]; then
         git clone --branch=master https://github.com/JBZoo/Misc.git build/misc;
         php vendor/bin/phpcs ./src --standard=build/misc/phpcs/JBZoo/ruleset.xml --report=full;
         php vendor/bin/phpmd ./src text ./build/misc/phpmd/jbzoo.xml --verbose;
