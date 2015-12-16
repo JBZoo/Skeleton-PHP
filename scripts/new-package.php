@@ -16,7 +16,6 @@
 
 $packageName = '';
 
-
 if (!$packageName) {
     throw new Exception('Undefined package name! Plz, check config');
 }
@@ -109,7 +108,6 @@ rename(
     $config['root'] . '/README.dist.md',
     $config['root'] . '/README.md'
 );
-
 
 
 /********** Useful info! **********************************************************************************************/

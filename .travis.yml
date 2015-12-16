@@ -35,7 +35,7 @@ before_script:
 
 script:
   # PHPUnit tests
-  - php vendor/bin/phpunit;
+  - php vendor/bin/phpunit
 
   # Check PHP Code Standarts
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "$PHP_TEST_VERSION" ]; then

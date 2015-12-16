@@ -1,34 +1,34 @@
 {
-    "name": "jbzoo/skeleton-php",
-    "type": "library",
-    "description": "",
-    "license": "MIT",
-    "minimum-stability": "stable",
-    "keywords": ["skeleton", "travis", "phpunit", "composer", "github", "jbzoo", "packagist"],
-    "authors": [
+    "name"              : "jbzoo/skeleton-php",
+    "type"              : "library",
+    "description"       : "",
+    "license"           : "MIT",
+    "minimum-stability" : "stable",
+    "keywords"          : ["skeleton", "travis", "phpunit", "composer", "github", "jbzoo", "packagist"],
+    "authors"           : [
         {
-            "name": "SmetDenis",
-            "email": "denis@jbzoo.com",
-            "role": "lead"
+            "name"  : "SmetDenis",
+            "email" : "denis@jbzoo.com",
+            "role"  : "lead"
         }
     ],
-    "require": {
-        "php": ">=5.3.10"
+    "require"           : {
+        "php" : ">=5.3.10"
     },
-    "require-dev": {
-        "jbzoo/phpunit": "1.x-dev"
+    "require-dev"       : {
+        "jbzoo/phpunit" : "1.x-dev"
     },
-    "autoload": {
-        "psr-4": {
-            "JBZoo\\__PACKAGE__\\": "src"
+    "autoload"          : {
+        "psr-4" : {
+            "JBZoo\\__PACKAGE__\\" : "src"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.x-dev"
+    "extra"             : {
+        "branch-alias" : {
+            "dev-master" : "1.x-dev"
         }
     },
-    "support": {
-        "issues": "https://github.com/JBZoo/__PACKAGE__/issues"
+    "support"           : {
+        "issues" : "https://github.com/JBZoo/__PACKAGE__/issues"
     }
 }
