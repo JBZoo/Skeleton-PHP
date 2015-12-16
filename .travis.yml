@@ -16,6 +16,7 @@ env:
 before_script:
   # Composer
   - composer self-update
+  - composer clear-cache
   - composer update
   - composer validate
 
