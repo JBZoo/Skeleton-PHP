@@ -3,7 +3,6 @@
     "type"              : "library",
     "description"       : "",
     "license"           : "MIT",
-    "keywords"          : ["skeleton", "travis", "phpunit", "composer", "github", "jbzoo", "packagist"],
     "minimum-stability" : "stable",
     "authors"           : [
         {
@@ -52,7 +51,7 @@
         ],
         "manifest"   : "composer validate",
         "autoload"   : "composer dump-autoload --optimize --no-scripts",
-        "phpunit"    : "php ./vendor/phpunit/phpunit/phpunit",
+        "phpunit"    : "php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist",
         "phpmd"      : "php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose",
         "phpcs"      : "php ./vendor/squizlabs/php_codesniffer/scripts/phpcs ./src --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml --report=full",
         "phpcpd"     : "php ./vendor/sebastian/phpcpd/phpcpd ./src --verbose",
