@@ -14,7 +14,7 @@
  */
 
 
-$packageName = '';
+$packageName = isset($GLOBALS["argv"][1]) ? $GLOBALS["argv"][1] : 'Testing';
 
 if (!$packageName) {
     throw new Exception('Undefined package name! Plz, check config');
@@ -27,8 +27,10 @@ $config = array(
     'exclude' => array(
         '.',
         '..',
-        '.idea',
         '.git',
+        '.idea',
+        'vendor',
+        'build',
         pathinfo(__FILE__, PATHINFO_BASENAME),
     ),
     'defines' => array(
@@ -99,6 +101,11 @@ foreach ($list as $file) {
         $content = str_replace($const, $value, $content);
     }
 
+    if (strpos($file, 'composer.json')) {
+        $regexp  = '#\,\s*"skeleton\".*\],#ius';
+        $content = preg_replace($regexp, ',', $content);
+    }
+
     file_put_contents($file, $content);
 }
 
@@ -110,6 +117,8 @@ rename(
 );
 
 
-/********** Useful info! **********************************************************************************************/
-echo "EXCECUTE COMMAND --> 'composer update'" . PHP_EOL;
-echo "EXCECUTE COMMAND --> 'phpunit'";
+/********** Self destroy **********************************************************************************************/
+unlink(__FILE__);
+unlink(__DIR__);
+
+echo 'Ok!';
