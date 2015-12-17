@@ -10,48 +10,32 @@ php:
 matrix:
   fast_finish: true
 
-env:
-  - PHP_TEST_VERSION=5.6
-
 before_script:
+  - export PHP_TEST_VERSION=5.6
+
   # Composer
   - composer self-update
-  - composer clear-cache
-  - composer update
-  - composer validate
 
-  # Install reporting tools
+  # Install all testing and dev tools
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "$PHP_TEST_VERSION" ]; then
-        composer require
-          satooshi/php-coveralls
-          squizlabs/php_codesniffer
-          sebastian/phpcpd
-          phploc/phploc
-          phpmd/phpmd
-        ;
+        composer update;
+    else
+        composer update --no-dev;
     fi;'
 
   # Update env
   - phpenv rehash
 
 script:
-  # PHPUnit tests
-  - php vendor/bin/phpunit
-
-  # Check PHP Code Standarts
+  # PHPUnit tests OR global testing
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "$PHP_TEST_VERSION" ]; then
-        git clone --branch=master https://github.com/JBZoo/Misc.git build/misc;
-        php vendor/bin/phpcs ./src --standard=build/misc/phpcs/JBZoo/ruleset.xml --report=full;
-        php vendor/bin/phpmd ./src text ./build/misc/phpmd/jbzoo.xml --verbose;
-        php vendor/bin/phpcpd ./src --no-interaction --verbose;
+        composer test;
+    else
+        composer phpunit;
     fi;'
 
 after_script:
-  # Get statistics
+  # Send to coveralls
   - sh -c 'if [ "$TRAVIS_PHP_VERSION" = "$PHP_TEST_VERSION" ]; then
         php vendor/bin/coveralls --verbose;
-        php vendor/bin/phploc ./src --no-interaction --verbose;
     fi;'
-
-notifications:
-  slack: jbzoo:RPyzxVQZPuPhgvm1Q6fDvK3C

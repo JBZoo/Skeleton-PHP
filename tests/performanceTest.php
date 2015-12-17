@@ -22,7 +22,7 @@ use JBZoo\__PACKAGE__\Package;
  */
 class PerformanceTest extends PHPUnit
 {
-    protected $_max = 1000;
+    protected $_max = 1000000;
 
     public function testLeakMemoryCreate()
     {
@@ -34,7 +34,7 @@ class PerformanceTest extends PHPUnit
         for ($i = 0; $i < $this->_max; $i++) {
             // Your code
             $obj = new Package();
-            is('street magic', $obj->doSomeStreetMagic());
+            $obj->doSomeStreetMagic();
             unset($obj);
             // Your code
         }
