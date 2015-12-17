@@ -19,6 +19,4 @@ namespace JBZoo\PHPUnit;
 // @codeCoverageIgnoreStart
 
 
-
-
 // @codeCoverageIgnoreEnd

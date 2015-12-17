@@ -27,6 +27,7 @@ class Test extends PHPUnit
     public function testShouldDoSomeStreetMagic()
     {
         $obj = new Package();
+
         is('street magic', $obj->doSomeStreetMagic());
     }
 

@@ -20,7 +20,6 @@ namespace JBZoo\__PACKAGE__;
  */
 class Package
 {
-
     /**
      * @return string
      */

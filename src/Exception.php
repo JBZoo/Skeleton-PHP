@@ -20,4 +20,5 @@ namespace JBZoo\__PACKAGE__;
  */
 class Exception extends \Exception
 {
+    
 }
