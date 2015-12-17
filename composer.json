@@ -44,7 +44,8 @@
         ],
         "skeleton"   : [
             "php ./new-package.php __CHANGE_ME__",
-            "@update-all"
+            "@update-all",
+            "@test"
         ],
         "manifest"   : "composer validate",
         "autoload"   : "composer dump-autoload --optimize --no-scripts",

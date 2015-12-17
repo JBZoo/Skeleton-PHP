@@ -120,6 +120,6 @@ rename(
 
 /********** Self-destruction ******************************************************************************************/
 @unlink(__FILE__);
-@unlink(dirname(__FILE__));
 
-echo 'Ok!';
+echo $packageName . ' is ready!' . PHP_EOL;
+exit(0);
