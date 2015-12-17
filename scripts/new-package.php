@@ -17,7 +17,8 @@
 $packageName = isset($GLOBALS["argv"][1]) ? $GLOBALS["argv"][1] : 'Testing';
 
 if (!$packageName || $packageName == '__CHANGE_ME__') {
-    throw new Exception('Undefined package name! Plz, check config');
+    echo 'Undefined package name! Plz, check config' . PHP_EOL;
+    exit(1);
 }
 
 global $config;
