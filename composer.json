@@ -42,6 +42,9 @@
             "composer self-update",
             "composer update"
         ],
+        "skeleton"   : [
+            "php ./scripts/new-package.php"
+        ],
         "manifest"   : "composer validate",
         "autoload"   : "composer dump-autoload --optimize --no-scripts",
         "phpunit"    : "php ./vendor/phpunit/phpunit/phpunit",
