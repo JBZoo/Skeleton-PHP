@@ -24,7 +24,7 @@ if (!$packageName || $packageName == '__CHANGE_ME__') {
 global $config;
 
 $config = array(
-    'root'    => realpath('../'),
+    'root'    => realpath('.'),
     'exclude' => array(
         '.',
         '..',
@@ -119,7 +119,7 @@ rename(
 
 
 /********** Self-destruction ******************************************************************************************/
-unlink(__FILE__);
-unlink(__DIR__);
+@unlink(__FILE__);
+@unlink(dirname(__FILE__));
 
 echo 'Ok!';
