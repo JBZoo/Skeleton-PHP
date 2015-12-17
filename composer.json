@@ -43,8 +43,8 @@
             "composer update"
         ],
         "skeleton"   : [
-            "php ./scripts/new-package.php",
             "@update-all",
+            "php ./scripts/new-package.php __CHANGE_ME__",
             "@test"
         ],
         "manifest"   : "composer validate",
