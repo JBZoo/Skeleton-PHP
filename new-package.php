@@ -21,6 +21,8 @@ if (!$packageName || $packageName == '__CHANGE_ME__') {
     exit(1);
 }
 
+$packageName = ucfirst($packageName);
+
 global $config;
 
 $config = array(
