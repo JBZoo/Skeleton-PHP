@@ -10,13 +10,8 @@ php:
 matrix:
   fast_finish: true
 
-before_script:
-  - composer skeleton Rulezzz
-  - composer update-all
-  - phpenv rehash
-
 script:
-  - composer test
+  - composer skeleton Rulezzz
 
 after_script:
- - composer coveralls
+  - composer coveralls
