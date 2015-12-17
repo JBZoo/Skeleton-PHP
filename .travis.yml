@@ -11,7 +11,9 @@ matrix:
   fast_finish: true
 
 script:
-  - composer skeleton Rulezzz
+  - php ./new-package.php Rulezzz
+  - composer update-all
+  - composer test
 
 after_script:
   - composer coveralls
