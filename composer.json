@@ -40,7 +40,7 @@
         ],
         "update-all" : [
             "composer self-update --no-interaction",
-            "composer update --no-interaction"
+            "composer update --no-interaction --prefer-source --optimize-autoloader"
         ],
         "skeleton"   : [
             "php ./new-package.php __CHANGE_ME__",
@@ -49,7 +49,7 @@
         ],
         "git-reset"  : "git reset --hard",
         "manifest"   : "composer validate --no-interaction",
-        "autoload"   : "composer dump-autoload --optimize --no-scripts --no-interaction",
+        "autoload"   : "composer dump-autoload --optimize --no-interaction",
         "phpunit"    : "php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist",
         "phpmd"      : "php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose",
         "phpcs"      : "php ./vendor/squizlabs/php_codesniffer/scripts/phpcs ./src --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml --report=full",
