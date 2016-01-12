@@ -39,6 +39,7 @@
  
  * [Packagist](https://packagist.org/) 
  * [Travis](https://travis-ci.org/)
+ * [Coveralls](https://coveralls.io)
  * [Scrutinizer] (https://scrutinizer-ci.com/)
 
 ### Желательно...
