@@ -28,6 +28,9 @@
             "dev-master" : "1.x-dev"
         }
     },
+    "config"            : {
+        "optimize-autoloader" : true
+    },    
     "scripts"           : {
         "test"       : [
             "@manifest",
@@ -40,7 +43,7 @@
         ],
         "update-all" : [
             "composer self-update --no-interaction",
-            "composer update --no-interaction --prefer-source --optimize-autoloader"
+            "composer update --no-interaction --optimize-autoloader"
         ],
         "skeleton"   : [
             "php ./new-package.php __CHANGE_ME__",
