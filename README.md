@@ -35,6 +35,11 @@
     * Особенности запуска или тестирования (если есть)
  * ...само собой, поддерживать репозиторий чистым!
 
+### Cервисы
+ 
+ * [Packagist](https://packagist.org/) 
+ * [Travis](https://travis-ci.org/)
+ * [Scrutinizer] (https://scrutinizer-ci.com/)
 
 ### Желательно...
 
