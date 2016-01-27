@@ -15,10 +15,10 @@
 namespace JBZoo\PHPUnit;
 
 /**
- * Class CodeStyleTest
+ * Class CodestyleTest
  * @package JBZoo\PHPUnit
  */
-class CodeStyleTestTest extends Codestyle
+class CodestyleTest extends Codestyle
 {
     protected $_packageName = "__PACKAGE__";
 
