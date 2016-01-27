@@ -18,10 +18,10 @@ use JBZoo\__PACKAGE__\Package;
 use JBZoo\__PACKAGE__\Exception;
 
 /**
- * Class Test
+ * Class PackageTest
  * @package JBZoo\PHPUnit
  */
-class Test extends PHPUnit
+class PackageTest extends PHPUnit
 {
 
     public function testShouldDoSomeStreetMagic()
