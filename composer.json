@@ -29,8 +29,7 @@
         }
     },
     "config"            : {
-        "optimize-autoloader" : true,
-        "bin-dir"             : "bin"
+        "optimize-autoloader" : true
     },    
     "scripts"           : {
         "test"       : [
