@@ -18,14 +18,12 @@ matrix:
       env: XDEBUG_OFF="yes"
 
 before_script:
-  # Install PHP Libs
-  - composer update-all
-
   # Disable xdebug PHP module
   - if [[ $XDEBUG_OFF = yes ]]; then phpenv config-rm xdebug.ini; fi;
 
 script:
   - php ./new-package.php Rulezzz
+  - composer update-all  
   - composer test
 
 after_script:
