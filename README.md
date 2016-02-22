@@ -41,6 +41,8 @@
  * [Travis](https://travis-ci.org/)
  * [Coveralls](https://coveralls.io)
  * [Scrutinizer] (https://scrutinizer-ci.com/)
+ * Нотификация в наш Slack
+ * Нотификация покрытия в наш Slack (+/-5%)
 
 ### Желательно...
 
