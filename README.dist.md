@@ -1,4 +1,4 @@
-# JBZoo __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)      [![Coverage Status](https://coveralls.io/repos/JBZoo/__PACKAGE__/badge.svg?branch=master&service=github)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)
+# JBZoo __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)      [![Coverage Status](https://coveralls.io/repos/github/JBZoo/__PACKAGE__/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)
 
 #### PHP library description
 
