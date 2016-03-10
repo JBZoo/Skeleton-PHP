@@ -41,6 +41,9 @@
  * [Travis](https://travis-ci.org/)
  * [Coveralls](https://coveralls.io)
  * [Scrutinizer] (https://scrutinizer-ci.com/)
+ * Нотификация в наш Slack
+ * Нотификация покрытия в наш Slack (+/-5%)
+ * Добавить правило в [JBZoo/Composer-Cleanup](https://github.com/JBZoo/Composer-Cleanup/blob/master/src/Rules.php)
 
 ### Желательно...
 
