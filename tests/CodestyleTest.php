@@ -21,5 +21,5 @@ namespace JBZoo\PHPUnit;
 class CodestyleTest extends Codestyle
 {
     protected $_packageName = "__PACKAGE__";
-
+    // protected $_packageAuthor = 'Denis Smetannikov <denis@jbzoo.com>';
 }
