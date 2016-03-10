@@ -22,24 +22,16 @@ use JBZoo\__PACKAGE__\Package;
  */
 class PerformanceTest extends PHPUnit
 {
-    protected $_max = 1000000;
-
     public function testLeakMemoryCreate()
     {
-        if ($this->isXDebug()) {
-            return;
-        }
-
-        $this->startProfiler();
-
-        for ($i = 0; $i < $this->_max; $i++) {
-            // Your code start
-            $obj = new Package();
-            $obj->doSomeStreetMagic();
-            unset($obj);
-            // Your code finish
-        }
-
-        alert($this->loopProfiler($this->_max), 'Create - min');
+        runBench([
+            'Test name' => function () {
+                // Your code start
+                $obj = new Package();
+                $obj->doSomeStreetMagic();
+                unset($obj);
+                // Your code finish
+            },
+        ]);
     }
 }
