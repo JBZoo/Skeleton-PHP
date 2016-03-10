@@ -109,6 +109,11 @@ foreach ($list as $file) {
         $content = preg_replace($regexp, ',', $content);
     }
 
+    if (strpos($file, '.travis.yml')) {
+        $regexp  = "  - php ./new-package.php Rulezzz\n";
+        $content = preg_replace($regexp, '', $content);
+    }
+
     file_put_contents($file, $content);
 }
 
