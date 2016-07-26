@@ -21,7 +21,7 @@ before_script:
   - if [[ $XDEBUG_OFF = yes ]]; then phpenv config-rm xdebug.ini; fi;
 
 script:
-  - php ./new-package.php Rulezzz
+  - make new-project NAME=Rulezzz
   - make test-all
 
 after_script:

@@ -104,13 +104,8 @@ foreach ($list as $file) {
         $content = str_replace($const, $value, $content);
     }
 
-    if (strpos($file, 'composer.json')) {
-        $regexp  = '#\,\s*"skeleton\".*\]#ius';
-        $content = preg_replace($regexp, ',', $content);
-    }
-
     if (strpos($file, '.travis.yml')) {
-        $content = str_replace("  - php ./new-package.php Rulezzz\n", '', $content);
+        $content = str_replace("  - make new-project NAME=Rulezzz\n", '', $content);
     }
 
     file_put_contents($file, $content);
