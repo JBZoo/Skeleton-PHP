@@ -31,39 +31,37 @@ autoload:
 test:
 	@echo ""
 	@echo ">>> >>> >>> >>> Run unit-tests"
-	bash ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
+	php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist
 
 phpmd:
 	@echo ""
 	@echo ">>> >>> >>> >>> Check PHPmd"
-	bash ./vendor/bin/phpmd ./src text ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose
+	php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose
 
 phpcs:
 	@echo ""
 	@echo ">>> >>> >>> >>> Check Code Style"
-	bash ./vendor/bin/phpcs ./src --extensions=php --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml --report=full
+	php ./vendor/squizlabs/php_codesniffer/scripts/phpcs ./src --extensions=php --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml --report=full
 
 phpcpd:
 	@echo ""
 	@echo ">>> >>> >>> >>> Check Copy&Paste"
-	bash ./vendor/bin/phpcpd ./src --verbose
+	php ./vendor/sebastian/phpcpd/phpcpd ./src --verbose
 
 phploc:
 	@echo ""
 	@echo ">>> >>> >>> >>> Show statistic"
-	bash ./vendor/bin/phploc ./src --verbose
+	php ./vendor/phploc/phploc/phploc ./src --verbose
 
 reset:
-	@echo ""
 	@echo ">>> >>> >>> >>> Hard reset"
 	git reset --hard
 
 test-all:
-	@echo ""
 	@echo ">>> >>> >>> >>> Run all tests"
 	make validate build test phpmd phpcs phpcpd phploc
 
 coveralls:
 	@echo ""
 	@echo ">>> >>> >>> >>> Send coverage to coveralls.io"
-	bash ./vendor/bin/coveralls --verbose
+	php ./vendor/satooshi/php-coveralls/bin/coveralls --verbose
