@@ -11,9 +11,9 @@
 # @link      https://github.com/JBZoo/__PACKAGE__
 #
 
-.PHONY: build test tests
+.PHONY: update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
 
-build:
+update:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Update project\033[0m"
 	@composer update --optimize-autoloader --no-interaction
 	@echo ""
@@ -74,4 +74,4 @@ coveralls:
 new-project:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Create new PHP project\033[0m"
 	@php ./new-project.php ${NAME}
-	@make build
+	@make update
