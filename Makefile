@@ -26,7 +26,6 @@ test-all:
 validate:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer validate\033[0m"
 	@composer validate --no-interaction
-	@echo ""
 
 autoload:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer autoload\033[0m"
@@ -42,7 +41,6 @@ phpmd:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Check PHPmd\033[0m"
 	@php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text  \
          ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose
-	@echo ""
 
 phpcs:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Check Code Style\033[0m"
