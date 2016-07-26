@@ -35,7 +35,8 @@ autoload:
 
 test:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Run unit-tests\033[0m"
-	@php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist
+	ls -la ./vendor/bin
+	sh ./vendor/bin/phpunit --configuration ./phpunit.xml.dist
 	@echo ""
 
 phpmd:
