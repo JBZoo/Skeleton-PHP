@@ -72,5 +72,6 @@ coveralls:
 
 # Cutline
 new-project:
-	php ./new-project.php ${NAME}
-	make build
+	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Create new PHP project\033[0m"
+	@php ./new-project.php ${NAME}
+	@make build
