@@ -26,6 +26,7 @@ test-all:
 validate:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer validate\033[0m"
 	@composer validate --no-interaction
+	@echo ""
 
 autoload:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer autoload\033[0m"
@@ -63,7 +64,6 @@ phploc:
 reset:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Hard reset\033[0m"
 	@git reset --hard
-	@echo ""
 
 coveralls:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Send coverage to coveralls.io\033[0m"
@@ -73,4 +73,4 @@ coveralls:
 # Cutline
 new-project:
 	php ./new-package.php ${NAME}
-	make test-all
+	make build
