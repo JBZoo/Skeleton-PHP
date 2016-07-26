@@ -72,5 +72,5 @@ coveralls:
 
 # Cutline
 new-project:
-	php ./new-package.php ${NAME}
+	php ./new-project.php ${NAME}
 	make build
