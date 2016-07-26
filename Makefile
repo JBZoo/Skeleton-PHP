@@ -20,7 +20,7 @@ update:
 
 test-all:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Run all tests\033[0m"
-	@make validate build test phpmd phpcs phpcpd phploc
+	@make validate update test phpmd phpcs phpcpd phploc
 	@echo ""
 
 validate:
