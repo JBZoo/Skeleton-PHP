@@ -69,3 +69,8 @@ coveralls:
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Send coverage to coveralls.io\033[0m"
 	@php ./vendor/satooshi/php-coveralls/bin/coveralls --verbose
 	@echo ""
+
+new-project:
+	php ./new-package.php ${NAME}
+	make update
+	make test
