@@ -70,6 +70,7 @@ coveralls:
 	@php ./vendor/satooshi/php-coveralls/bin/coveralls --verbose
 	@echo ""
 
+# Cutline
 new-project:
 	php ./new-package.php ${NAME}
 	make update

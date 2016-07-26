@@ -104,6 +104,11 @@ foreach ($list as $file) {
         $content = str_replace($const, $value, $content);
     }
 
+    if (strpos($file, 'Makefile')) {
+        $regexp  = '/# Cutline.*]/ius';
+        $content = preg_replace($regexp, '', $content);
+    }
+
     if (strpos($file, '.travis.yml')) {
         $content = str_replace("  - make new-project NAME=Rulezzz\n", '', $content);
     }
