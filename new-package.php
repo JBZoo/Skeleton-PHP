@@ -105,7 +105,7 @@ foreach ($list as $file) {
     }
 
     if (strpos($file, 'Makefile')) {
-        $regexp  = '/# Cutline.*]/ius';
+        $regexp  = '/\n# Cutline.*/ius';
         $content = preg_replace($regexp, '', $content);
     }
 
