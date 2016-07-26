@@ -105,7 +105,7 @@ foreach ($list as $file) {
     }
 
     if (strpos($file, 'composer.json')) {
-        $regexp  = '#\,\s*"skeleton\".*\],#ius';
+        $regexp  = '#\,\s*"skeleton\".*\]#ius';
         $content = preg_replace($regexp, ',', $content);
     }
 
