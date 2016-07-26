@@ -11,41 +11,41 @@
 # @link      https://github.com/JBZoo/__PACKAGE__
 #
 
-.PHONY: update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
+.PHONY: build update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
+
+build: update
+
+test-all:
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Run all tests \e[0m"
+	@make validate update test phpmd phpcs phpcpd phploc
 
 update:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Update project\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Update project \e[0m"
 	@composer update --optimize-autoloader --no-interaction
 	@echo ""
 
-test-all:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Run all tests\033[0m"
-	@make validate update test phpmd phpcs phpcpd phploc
-	@echo ""
-
 validate:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer validate\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Composer validate \e[0m"
 	@composer validate --no-interaction
 	@echo ""
 
 autoload:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Composer autoload\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Composer autoload \e[0m"
 	@composer dump-autoload --optimize --no-interaction
 	@echo ""
 
 test:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Run unit-tests\033[0m"
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \e[102m Run unit-tests\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Run unit-tests \e[0m"
 	@php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist
 	@echo ""
 
 phpmd:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Check PHPmd\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Check PHPmd \e[0m"
 	@php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text  \
          ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose
 
 phpcs:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Check Code Style\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Check Code Style \e[0m"
 	@php ./vendor/squizlabs/php_codesniffer/scripts/phpcs ./src  \
         --extensions=php                                         \
         --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml   \
@@ -53,26 +53,26 @@ phpcs:
 	@echo ""
 
 phpcpd:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Check Copy&Paste\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Check Copy&Paste \e[0m"
 	@php ./vendor/sebastian/phpcpd/phpcpd ./src --verbose
 	@echo ""
 
 phploc:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Show statistic\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Show stats \e[0m"
 	@php ./vendor/phploc/phploc/phploc ./src --verbose
 	@echo ""
 
 reset:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Hard reset\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Hard reset \e[0m"
 	@git reset --hard
 
 coveralls:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Send coverage to coveralls.io\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Send coverage to coveralls.io \e[0m"
 	@php ./vendor/satooshi/php-coveralls/bin/coveralls --verbose
 	@echo ""
 
 # Cutline
 new-project:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Create new PHP project\033[0m"
+	@echo -e "\e[33m>>> >>> >>> >>> >>> >>> >>> >>> \e[30;46m Create new PHP project \e[0m"
 	@php ./new-project.php ${NAME}
 	@make update
