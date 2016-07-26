@@ -73,5 +73,4 @@ coveralls:
 # Cutline
 new-project:
 	php ./new-package.php ${NAME}
-	make update
-	make test
+	make test-all
