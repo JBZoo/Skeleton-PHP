@@ -17,6 +17,8 @@ build: update
 
 test-all:
 	@echo -e "\e[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \e[0;30;46m Run all tests \e[0m"
+	@echo -e "\e[0;33m>>> >>> >>> >>> >>> >>> >>> >>> Run all tests \e[0m"
+	@echo -e "\e[0;30;46m>>> >>> >>> >>> >>> >>> >>> >>> Run all tests \e[0m"
 	@make validate update test phpmd phpcs phpcpd phploc
 
 update:
