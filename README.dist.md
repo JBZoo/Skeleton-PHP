@@ -19,8 +19,8 @@ $object->doSomeMagic(':)');
 
 ## Unit tests and check code style
 ```sh
-composer update-all
-composer test
+make
+make test-all
 ```
 
 
