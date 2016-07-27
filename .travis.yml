@@ -21,6 +21,13 @@ before_script:
   - if [[ $XDEBUG_OFF = yes ]]; then phpenv config-rm xdebug.ini; fi;
 
 script:
+  - echo -e "\e[0;33mTest \e[0;30;46m Label \e[0m"
+  - echo -e "\e[0;33mTest \e[0;30;46m Label \e[0m"
+  - echo -e "\033[0;33mTest \033[0;30;46m Label \033[0m"
+  - echo -e "\e[0;33mTest Label\e[0m"
+  - echo -e "\033[0;30;46m Test Label \e[0m"
+  - exit
+
   - make new-project NAME=Rulezzz
   - make test-all
 
