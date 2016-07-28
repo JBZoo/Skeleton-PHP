@@ -1,6 +1,7 @@
-build
-vendor
-resources
-phpunit.xml
-phpunit-*.xml
-composer.lock
+/build
+/logs
+/vendor
+/resources
+/phpunit.xml
+/phpunit-*.xml
+/composer.lock
