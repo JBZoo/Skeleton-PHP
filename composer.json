@@ -1,7 +1,7 @@
 {
     "name"              : "jbzoo/skeleton-php",
     "type"              : "library",
-    "description"       : "",
+    "description"       : "Simple skeleton for any PHP-project",
     "license"           : "MIT",
     "keywords"          : ["skeleton", "travis", "phpunit", "composer", "github", "jbzoo", "packagist"],
     "minimum-stability" : "stable",
@@ -16,7 +16,7 @@
         "php" : ">=5.4"
     },
     "require-dev"       : {
-        "jbzoo/phpunit" : "^1.6"
+        "jbzoo/phpunit" : "^1.9"
     },
     "autoload"          : {
         "psr-4" : {
