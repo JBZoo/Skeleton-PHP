@@ -95,6 +95,7 @@ phpcov:
 
 coveralls: phpcov
 	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Send coverage to coveralls.io \033[0m"
+	@mkdir -pv ./build/logs
 	@php ./vendor/satooshi/php-coveralls/bin/coveralls -vvv
 	@echo ""
 
