@@ -105,11 +105,6 @@ foreach ($list as $file) {
         $content = str_replace($const, $value, $content);
     }
 
-    if (strpos($file, 'Makefile')) {
-        $regexp = '/\n# Cutline.*/ius';
-        $content = preg_replace($regexp, '', $content);
-    }
-
     if (strpos($file, '.gitignore')) {
         $regexp = '/\n# Cutline.*/ius';
         $content = preg_replace($regexp, '', $content);
