@@ -120,20 +120,24 @@ foreach ($list as $file) {
 
 /********** Change Readme file ****************************************************************************************/
 rename(
+    $config['root'] . "/src/__NS__.php",
+    $config['root'] . "/src/{$namespace}.php"
+);
+
+rename(
+    $config['root'] . "/tests/__NS__CodestyleTest.php",
+    $config['root'] . "/tests/{$namespace}CodestyleTest.php"
+);
+
+rename(
+    $config['root'] . "/tests/__NS__CopyrightTest.php",
+    $config['root'] . "/tests/{$namespace}CopyrightTest.php"
+);
+
+rename(
     $config['root'] . '/README.dist.md',
     $config['root'] . '/README.md'
 );
-
-rename(
-    $config['root'] . "/__NS__CodestyleTest.php",
-    $config['root'] . "/{$namespace}CodestyleTest.php"
-);
-
-rename(
-    $config['root'] . "/__NS__CopyrightTest.php",
-    $config['root'] . "/{$namespace}CopyrightTest.php"
-);
-
 
 /********** Self-destruction ******************************************************************************************/
 @unlink(__FILE__);
