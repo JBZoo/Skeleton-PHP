@@ -32,3 +32,5 @@ new-project:
 	$(call title,"Create new PHP project")
 	@php `pwd`/create-new-project.php ${NAME}
 	@make update
+	@make codestyle
+	@make test
