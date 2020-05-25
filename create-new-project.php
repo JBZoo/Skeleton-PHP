@@ -122,7 +122,7 @@ foreach ($list as $file) {
 
 $map = [
     "src/__NS__.php"                => "src/{$namespace}.php",
-    "tests/__NS__Test"              => "tests/{$namespace}Test",
+    "tests/__NS__Test.php"          => "tests/{$namespace}Test.php",
     "tests/__NS__CodestyleTest.php" => "tests/{$namespace}CodestyleTest.php",
     "tests/__NS__CopyrightTest.php" => "tests/{$namespace}CopyrightTest.php",
     '/README.dist.md'               => 'README.md',
