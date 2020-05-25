@@ -18,3 +18,6 @@ vendor
 phpunit.xml
 composer.lock
 *.cache
+
+# Cutline
+MyLoveNewProject*
