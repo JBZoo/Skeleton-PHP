@@ -27,11 +27,7 @@ test-all: ##@Project Run all project tests at once
 	@make test
 	@make codestyle
 
-
 # Cutline
 new-project:
 	$(call title,"Create new PHP project")
 	@php `pwd`/create-new-project.php ${NAME}
-	@make update
-	@make codestyle
-	@make test
