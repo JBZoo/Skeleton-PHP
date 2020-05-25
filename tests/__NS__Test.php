@@ -18,15 +18,14 @@ namespace JBZoo\PHPUnit;
 use JBZoo\__NS__\__NS__;
 
 /**
- * Class PackageTest
+ * Class __NS__Test
  * @package JBZoo\PHPUnit
  */
-class PACKAGETest extends PHPUnit
+class __NS__Test extends PHPUnit
 {
     public function testShouldDoSomeStreetMagic()
     {
         $obj = new __NS__();
-
         isSame('street magic', $obj->doSomeStreetMagic());
     }
 }
