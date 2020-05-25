@@ -1,15 +1,16 @@
 #
-# JBZoo __PACKAGE__
+# JBZoo Toolbox - __PACKAGE__
 #
-# This file is part of the JBZoo CCK package.
+# This file is part of the JBZoo Toolbox project.
 # For the full copyright and license information, please view the LICENSE
 # file that was distributed with this source code.
 #
-# @package   __PACKAGE__
-# @license   MIT
-# @copyright Copyright (C) JBZoo.com,  All rights reserved.
-# @link      https://github.com/JBZoo/__PACKAGE__
+# @package    __PACKAGE__
+# @license    MIT
+# @copyright  Copyright (C) JBZoo.com, All rights reserved.
+# @link       https://github.com/JBZoo/__PACKAGE__
 #
+
 
 ifneq (, $(wildcard ./vendor/jbzoo/codestyle/src/init.Makefile))
     include ./vendor/jbzoo/codestyle/src/init.Makefile
@@ -23,8 +24,8 @@ update: ##@Project Install/Update all 3rd party dependencies
 
 
 test-all: ##@Project Run all project tests at once
-	@make codestyle
 	@make test
+	@make codestyle
 
 
 # Cutline
