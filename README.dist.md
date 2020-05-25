@@ -14,7 +14,7 @@ use JBZoo\__NS__\__NS__;
 
 // Just use it!
 $object = new __NS__();
-$object->doSomeMagic(':)');
+$object->doSomeStreetMagic(':)');
 ```
 
 ## Unit tests and check code style
