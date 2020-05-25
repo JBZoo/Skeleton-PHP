@@ -125,12 +125,12 @@ rename(
 );
 
 rename(
-    $config['root'] . "/__PACKAGE__CodestyleTest",
+    $config['root'] . "/__NS__CodestyleTest.php",
     $config['root'] . "/{$namespace}CodestyleTest.php"
 );
 
 rename(
-    $config['root'] . "/__PACKAGE__CopyrightTest",
+    $config['root'] . "/__NS__CopyrightTest.php",
     $config['root'] . "/{$namespace}CopyrightTest.php"
 );
 

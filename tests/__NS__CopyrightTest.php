@@ -16,10 +16,14 @@
 namespace JBZoo\PHPUnit;
 
 /**
- * Class __PACKAGE__CodestyleTest
+ * Class __PACKAGE__CopyrightTest
  *
  * @package JBZoo\PHPUnit
  */
-class __PACKAGE__CodestyleTest extends AbstractCodestyleTest
+class __NS__CopyrightTest extends AbstractCopyrightTest
 {
+    /**
+     * @var string
+     */
+    protected $packageName = '__PACKAGE__';
 }
