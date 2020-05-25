@@ -111,7 +111,7 @@ foreach ($list as $file) {
     }
 
     if (strpos($file, '.travis.yml')) {
-        $content = str_replace("  - make new-project NAME=\"My-Love-New-Project\"\n", '', $content);
+        $content = str_replace("  - php `pwd`/create-new-project.php Skeleton-Php\n", '', $content);
     }
 
     file_put_contents($file, $content);
