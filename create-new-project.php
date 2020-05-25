@@ -119,25 +119,19 @@ foreach ($list as $file) {
 
 
 /********** Change Readme file ****************************************************************************************/
-rename(
-    $config['root'] . "/src/__NS__.php",
-    $config['root'] . "/src/{$namespace}.php"
-);
 
-rename(
-    $config['root'] . "/tests/__NS__CodestyleTest.php",
-    $config['root'] . "/tests/{$namespace}CodestyleTest.php"
-);
+$map = [
+    "src/__NS__.php"                => "src/{$namespace}.php",
+    "tests/__NS__Test"              => "tests/{$namespace}Test",
+    "tests/__NS__CodestyleTest.php" => "tests/{$namespace}CodestyleTest.php",
+    "tests/__NS__CopyrightTest.php" => "tests/{$namespace}CopyrightTest.php",
+    '/README.dist.md'               => 'README.md',
+];
 
-rename(
-    $config['root'] . "/tests/__NS__CopyrightTest.php",
-    $config['root'] . "/tests/{$namespace}CopyrightTest.php"
-);
+foreach ($map as $oldName => $newName) {
+    rename("{$config['root']}/{$oldName}", "{$config['root']}/{$newName}");
+}
 
-rename(
-    $config['root'] . '/README.dist.md',
-    $config['root'] . '/README.md'
-);
 
 /********** Self-destruction ******************************************************************************************/
 @unlink(__FILE__);
