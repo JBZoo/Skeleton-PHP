@@ -13,13 +13,17 @@
  * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__NS__;
+namespace JBZoo\PHPUnit;
 
 /**
- * Class Exception
- * @package JBZoo\__NS__
+ * Class __PACKAGE__CopyrightTest
+ *
+ * @package JBZoo\PHPUnit
  */
-class Exception extends \RuntimeException
+class __PACKAGE__CopyrightTest extends AbstractCopyrightTest
 {
-
+    /**
+     * @var string
+     */
+    protected $packageName = '__PACKAGE__';
 }

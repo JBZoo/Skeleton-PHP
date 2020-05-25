@@ -1,33 +1,33 @@
 <?php
+
 /**
- * JBZoo __PACKAGE__
+ * JBZoo Toolbox - Composer-Graph
  *
- * This file is part of the JBZoo CCK package.
+ * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package   __PACKAGE__
- * @license   MIT
- * @copyright Copyright (C) JBZoo.com,  All rights reserved.
- * @link      https://github.com/JBZoo/__PACKAGE__
- * @author    Denis Smetannikov <denis@jbzoo.com>
+ * @package    Composer-Graph
+ * @license    MIT
+ * @copyright  Copyright (C) JBZoo.com, All rights reserved.
+ * @link       https://github.com/JBZoo/Composer-Graph
  */
-
 
 $packageName = isset($GLOBALS["argv"][1]) ? $GLOBALS["argv"][1] : 'Testing';
 
-if (!$packageName || $packageName == '__CHANGE_ME__') {
+if (!$packageName || $packageName === '__CHANGE_ME__') {
     echo 'Undefined package name! Plz, check config' . PHP_EOL;
     exit(1);
 }
 
-$packageName = ucfirst($packageName);
+$packageName = ucfirst(trim($packageName));
+$namespace = str_replace('-', '', $packageName);
 
 global $config;
 
-$config = array(
+$config = [
     'root'    => realpath('.'),
-    'exclude' => array(
+    'exclude' => [
         '.',
         '..',
         '.git',
@@ -35,12 +35,13 @@ $config = array(
         'vendor',
         'build',
         pathinfo(__FILE__, PATHINFO_BASENAME),
-    ),
-    'defines' => array(
+    ],
+    'defines' => [
         '__PACKAGE__'        => $packageName,
+        '__NS__'             => $namespace,
         'jbzoo/skeleton-php' => 'jbzoo/' . strtolower($packageName),
-    ),
-);
+    ],
+];
 
 
 /**********************************************************************************************************************/
@@ -54,7 +55,7 @@ function openFile($path)
     $contents = null;
 
     if ($realPath = realpath($path)) {
-        $handle   = fopen($path, "rb");
+        $handle = fopen($path, "rb");
         $contents = fread($handle, filesize($path));
         fclose($handle);
     }
@@ -68,7 +69,7 @@ function openFile($path)
  * @param array $results
  * @return array
  */
-function getFileList($dir, $filter = null, &$results = array())
+function getFileList($dir, $filter = null, &$results = [])
 {
     $files = scandir($dir);
 
@@ -105,12 +106,12 @@ foreach ($list as $file) {
     }
 
     if (strpos($file, 'Makefile')) {
-        $regexp  = '/\n# Cutline.*/ius';
+        $regexp = '/\n# Cutline.*/ius';
         $content = preg_replace($regexp, '', $content);
     }
 
     if (strpos($file, '.travis.yml')) {
-        $content = str_replace("  - make new-project NAME=Rulezzz\n", '', $content);
+        $content = str_replace("make new-project NAME=\"Rulezzz-Test\"\n", '', $content);
     }
 
     file_put_contents($file, $content);
@@ -121,6 +122,16 @@ foreach ($list as $file) {
 rename(
     $config['root'] . '/README.dist.md',
     $config['root'] . '/README.md'
+);
+
+rename(
+    $config['root'] . "/__PACKAGE__CodestyleTest",
+    $config['root'] . "/{$namespace}CodestyleTest.php"
+);
+
+rename(
+    $config['root'] . "/__PACKAGE__CopyrightTest",
+    $config['root'] . "/{$namespace}CopyrightTest.php"
 );
 
 

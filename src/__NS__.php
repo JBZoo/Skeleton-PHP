@@ -16,10 +16,16 @@
 namespace JBZoo\__NS__;
 
 /**
- * Class Exception
+ * Class __PACKAGE__
  * @package JBZoo\__NS__
  */
-class Exception extends \RuntimeException
+class __NS__
 {
-
+    /**
+     * @return string
+     */
+    public function doSomeStreetMagic()
+    {
+        return 'street magic';
+    }
 }

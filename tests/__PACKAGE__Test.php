@@ -13,13 +13,20 @@
  * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
-namespace JBZoo\__NS__;
+namespace JBZoo\PHPUnit;
+
+use JBZoo\__NS__\__NS__;
 
 /**
- * Class Exception
- * @package JBZoo\__NS__
+ * Class PackageTest
+ * @package JBZoo\PHPUnit
  */
-class Exception extends \RuntimeException
+class PACKAGETest extends PHPUnit
 {
+    public function testShouldDoSomeStreetMagic()
+    {
+        $obj = new __NS__();
 
+        isSame('street magic', $obj->doSomeStreetMagic());
+    }
 }

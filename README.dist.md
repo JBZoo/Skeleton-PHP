@@ -1,4 +1,4 @@
-# JBZoo __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)      [![Coverage Status](https://coveralls.io/repos/github/JBZoo/__PACKAGE__/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)
+# JBZoo - __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)      [![Coverage Status](https://coveralls.io/repos/github/JBZoo/__PACKAGE__/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)
 
 #### PHP library description
 
@@ -10,10 +10,10 @@
 require_once './vendor/autoload.php'; // composer autoload.php
 
 // Get needed classes
-use JBZoo\__PACKAGE__\__PACKAGE__;
+use JBZoo\__NS__\__NS__;
 
 // Just use it!
-$object = new __PACKAGE__();
+$object = new __NS__();
 $object->doSomeMagic(':)');
 ```
 

@@ -11,96 +11,24 @@
 # @link      https://github.com/JBZoo/__PACKAGE__
 #
 
-.PHONY: build update test-all validate autoload test phpmd phpcs phpcpd phploc reset coveralls
+ifneq (, $(wildcard ./vendor/jbzoo/codestyle/src/init.Makefile))
+    include ./vendor/jbzoo/codestyle/src/init.Makefile
+endif
 
-build: update
 
-test-all:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run all tests \033[0m"
-	@make validate test phpmd phpcs phpcpd phploc
+update: ##@Project Install/Update all 3rd party dependencies
+	$(call title,"Install/Update all 3rd party dependencies")
+	@echo "Composer flags: $(JBZOO_COMPOSER_UPDATE_FLAGS)"
+	@composer update $(JBZOO_COMPOSER_UPDATE_FLAGS)
 
-update:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Update project \033[0m"
-	@composer update --optimize-autoloader --no-interaction
-	@echo ""
 
-validate:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Composer validate \033[0m"
-	@composer validate --no-interaction
-	@echo ""
+test-all: ##@Project Run all project tests at once
+	@make codestyle
+	@make test
 
-autoload:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Composer autoload \033[0m"
-	@composer dump-autoload --optimize --no-interaction
-	@echo ""
-
-test:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run unit-tests \033[0m"
-	@php ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist
-	@echo ""
-
-test-x:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Run unit-tests with XDebug \033[0m"
-	@php-x ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml.dist --verbose
-	@echo ""
-
-phpmd:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check PHPmd \033[0m"
-	@php ./vendor/phpmd/phpmd/src/bin/phpmd ./src text  \
-         ./vendor/jbzoo/misc/phpmd/jbzoo.xml --verbose
-
-phpcs:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check Code Style \033[0m"
-	@php ./vendor/squizlabs/php_codesniffer/scripts/phpcs ./src  \
-        --extensions=php                                         \
-        --standard=./vendor/jbzoo/misc/phpcs/JBZoo/ruleset.xml   \
-        --report=full
-	@echo ""
-
-phpcpd:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Check Copy&Paste \033[0m"
-	@php ./vendor/sebastian/phpcpd/phpcpd ./src --verbose
-	@echo ""
-
-phploc:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Show stats \033[0m"
-	@php ./vendor/phploc/phploc/phploc ./src --verbose
-	@echo ""
-
-reset:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Hard reset \033[0m"
-	@git reset --hard
-
-clean:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Cleanup project \033[0m"
-	@make clean-build
-	@rm -fr ./vendor
-	@rm -f  ./composer.lock
-
-clean-build:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Cleanup build directory \033[0m"
-	@rm -fr ./build
-	@mkdir -pv ./build
-
-phpcov:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Merge coverage reports \033[0m"
-	@mkdir -pv ./build/coverage_total
-	@mkdir -pv ./build/coverage_cov
-	@php ./vendor/phpunit/phpcov/phpcov merge       \
-        --clover build/coverage_total/merge.xml     \
-        --html   build/coverage_total/merge-html    \
-        build/coverage_cov                          \
-        -v
-	@echo ""
-
-coveralls: phpcov
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Send coverage to coveralls.io \033[0m"
-	@mkdir -pv ./build/logs
-	@php ./vendor/satooshi/php-coveralls/bin/coveralls -vvv
-	@echo ""
 
 # Cutline
 new-project:
-	@echo -e "\033[0;33m>>> >>> >>> >>> >>> >>> >>> >>> \033[0;30;46m Create new PHP project \033[0m"
-	@php ./new-project.php ${NAME}
+	$(call title,"Create new PHP project")
+	@php `pwd`/create-new-project.php ${NAME}
 	@make update
