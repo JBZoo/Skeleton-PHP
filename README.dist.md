@@ -4,6 +4,7 @@
 
 [![License](https://poser.pugx.org/JBZoo/__PACKAGE__/license)](https://packagist.org/packages/JBZoo/__PACKAGE__)   [![Latest Stable Version](https://poser.pugx.org/JBZoo/__PACKAGE__/v/stable)](https://packagist.org/packages/JBZoo/__PACKAGE__) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JBZoo/__PACKAGE__/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/JBZoo/__PACKAGE__/?branch=master)
 
+
 ### Example
 
 ```php
@@ -17,9 +18,10 @@ $object = new __NS__();
 $object->doSomeStreetMagic(':)');
 ```
 
+
 ## Unit tests and check code style
 ```sh
-make
+make update
 make test-all
 ```
 

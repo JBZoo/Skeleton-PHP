@@ -17,9 +17,7 @@
     },
 
     "require-dev"  : {
-        "jbzoo/phpunit"             : "dev-master",
-        "jbzoo/codestyle"           : "dev-master",
-        "roave/security-advisories" : "dev-master"
+        "jbzoo/toolbox-dev" : "1.0.x-dev"
     },
 
     "autoload"     : {
@@ -34,5 +32,11 @@
 
     "config"       : {
         "optimize-autoloader" : true
+    },
+
+    "extra"        : {
+        "branch-alias" : {
+            "dev-master" : "1.0.x-dev"
+        }
     }
 }
