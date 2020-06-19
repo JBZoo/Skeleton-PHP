@@ -1,8 +1,8 @@
-# JBZoo - __PACKAGE__  [![Build Status](https://travis-ci.org/JBZoo/__PACKAGE__.svg?branch=master)](https://travis-ci.org/JBZoo/__PACKAGE__)      [![Coverage Status](https://coveralls.io/repos/github/JBZoo/__PACKAGE__/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)
-
-#### PHP library description
-
-[![License](https://poser.pugx.org/JBZoo/__PACKAGE__/license)](https://packagist.org/packages/JBZoo/__PACKAGE__)   [![Latest Stable Version](https://poser.pugx.org/JBZoo/__PACKAGE__/v/stable)](https://packagist.org/packages/JBZoo/__PACKAGE__) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JBZoo/__PACKAGE__/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/JBZoo/__PACKAGE__/?branch=master)
+# JBZoo / __PACKAGE__
+  
+  
+[![Build Status](https://travis-ci.org/JBZoo/PACKAGE.svg?branch=master)](https://travis-ci.org/JBZoo/PACKAGE)    [![Coverage Status](https://coveralls.io/repos/JBZoo/PACKAGE/badge.svg)](https://coveralls.io/github/JBZoo/PACKAGE?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/PACKAGE/coverage.svg)](https://shepherd.dev/github/JBZoo/PACKAGE)    
+[![Latest Stable Version](https://poser.pugx.org/JBZoo/PACKAGE/v)](https://packagist.org/packages/JBZoo/PACKAGE)    [![Latest Unstable Version](https://poser.pugx.org/JBZoo/PACKAGE/v/unstable)](https://packagist.org/packages/JBZoo/PACKAGE)    [![Dependents](https://poser.pugx.org/JBZoo/PACKAGE/dependents)](https://packagist.org/packages/JBZoo/PACKAGE/dependents?order_by=downloads)    [![GitHub Issues](https://img.shields.io/github/issues/JBZoo/PACKAGE)](https://github.com/JBZoo/PACKAGE/issues)    [![Total Downloads](https://poser.pugx.org/JBZoo/PACKAGE/downloads)](https://packagist.org/packages/JBZoo/PACKAGE/stats)    [![GitHub License](https://img.shields.io/github/license/JBZoo/PACKAGE)](https://github.com/JBZoo/PACKAGE/blob/master/LICENSE)
 
 
 ### Example

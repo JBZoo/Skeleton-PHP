@@ -1,7 +1,8 @@
-# JBZoo - Skeleton (PHP) [![Build Status](https://travis-ci.org/JBZoo/Skeleton-PHP.svg?branch=master)](https://travis-ci.org/JBZoo/Skeleton-PHP)   [![Coverage Status](https://coveralls.io/repos/JBZoo/Skeleton-PHP/badge.svg?branch=master&service=github)](https://coveralls.io/github/JBZoo/Skeleton-PHP?branch=master)
+# JBZoo - Skeleton (PHP)
 
-[![License](https://poser.pugx.org/JBZoo/Skeleton-PHP/license)](https://packagist.org/packages/JBZoo/Skeleton-PHP)
-[![Latest Stable Version](https://poser.pugx.org/JBZoo/Skeleton-PHP/v/stable)](https://packagist.org/packages/JBZoo/Skeleton-PHP) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/JBZoo/Skeleton-PHP/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/JBZoo/Skeleton-PHP/?branch=master)
+
+[![Build Status](https://travis-ci.org/JBZoo/Skeleton-Php.svg?branch=master)](https://travis-ci.org/JBZoo/Skeleton-Php)    [![GitHub Issues](https://img.shields.io/github/issues/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/issues)    [![GitHub License](https://img.shields.io/github/license/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/blob/master/LICENSE)
+
 
 This is not a completed library, but only a blank.
 It aims to clean up the minds of programmers and standardize the development of open-source libraries for JBZoo.
