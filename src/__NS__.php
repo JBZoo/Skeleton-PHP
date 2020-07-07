@@ -21,11 +21,13 @@ namespace JBZoo\__NS__;
  */
 class __NS__
 {
+    private $property = 'street magic';
+
     /**
      * @return string
      */
-    public function doSomeStreetMagic()
+    public function doSomeStreetMagic(): string
     {
-        return 'street magic';
+        return $this->property;
     }
 }
