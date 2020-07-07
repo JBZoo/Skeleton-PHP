@@ -21,6 +21,9 @@ namespace JBZoo\__NS__;
  */
 class __NS__
 {
+    /**
+     * @var string
+     */
     private $property = 'street magic';
 
     /**
