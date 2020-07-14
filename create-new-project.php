@@ -126,6 +126,7 @@ $map = [
     "tests/__NS__CodestyleTest.php" => "tests/{$namespace}CodestyleTest.php",
     "tests/__NS__CopyrightTest.php" => "tests/{$namespace}CopyrightTest.php",
     "tests/__NS__ReadmeTest.php"    => "tests/{$namespace}ReadmeTest.php",
+    "tests/__NS__ComposerTest.php"  => "tests/{$namespace}ComposerTest.php",
     '/README.dist.md'               => 'README.md',
 ];
 
