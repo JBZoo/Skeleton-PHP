@@ -38,6 +38,7 @@ $config = [
     ],
     'defines' => [
         '__PACKAGE__'        => $packageName,
+        '__PACKAGE_LOW__'    => strtolower($packageName),
         '__NS__'             => $namespace,
         'jbzoo/skeleton-php' => 'jbzoo/' . strtolower($packageName),
     ],
