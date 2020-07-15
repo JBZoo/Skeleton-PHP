@@ -16,7 +16,7 @@
 namespace JBZoo\PHPUnit;
 
 /**
- * Class __PACKAGE__ReadmeTest
+ * Class __NS__ReadmeTest
  *
  * @package JBZoo\PHPUnit
  */

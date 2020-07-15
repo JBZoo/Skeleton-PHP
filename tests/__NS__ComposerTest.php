@@ -20,7 +20,7 @@ namespace JBZoo\PHPUnit;
  *
  * @package JBZoo\PHPUnit
  */
-class __NS__ComposerTest extends AbstractReadmeTest
+class __NS__ComposerTest extends AbstractComposerTest
 {
 
 }

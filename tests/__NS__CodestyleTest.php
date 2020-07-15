@@ -16,7 +16,7 @@
 namespace JBZoo\PHPUnit;
 
 /**
- * Class __PACKAGE__CodestyleTest
+ * Class __NS__CodestyleTest
  *
  * @package JBZoo\PHPUnit
  */
