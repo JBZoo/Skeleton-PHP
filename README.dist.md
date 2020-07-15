@@ -8,10 +8,10 @@
 ### Example
 
 ```php
-use JBZoo\SkeletonPhp\SkeletonPhp;
+use JBZoo\SkeletonPhp\__PACKAGE__;
 
 // Just use it!
-$object = new SkeletonPhp();
+$object = new __PACKAGE__();
 $object->doSomeStreetMagic(':)');
 ```
 
