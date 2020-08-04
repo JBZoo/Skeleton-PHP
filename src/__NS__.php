@@ -16,7 +16,7 @@
 namespace JBZoo\__NS__;
 
 /**
- * Class __PACKAGE__
+ * Class __NS__
  * @package JBZoo\__NS__
  */
 class __NS__
