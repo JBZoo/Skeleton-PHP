@@ -13,7 +13,7 @@
  * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
-$default = include __DIR__ . '/../vendor/jbzoo/codestyle/src/phan/default.php';
+$default = include __DIR__ . '/vendor/jbzoo/codestyle/src/phan/default.php';
 
 return array_merge($default, [
     'directory_list' => [
