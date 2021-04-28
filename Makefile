@@ -28,9 +28,13 @@ test-all: ##@Project Run all project tests at once
 	@make codestyle
 
 
-test-local:
-	@git reset --hard
-	@php `pwd`/create-new-project.php Skeleton-Php
+local-test:
+	@make local-reset
 	@make update
 	@make test codestyle
 	@git reset --hard
+
+
+local-reset:
+	@git reset --hard
+	@php `pwd`/create-new-project.php Skeleton-Php
