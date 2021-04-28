@@ -28,7 +28,7 @@ test-all: ##@Project Run all project tests at once
 	@make codestyle
 
 
-#### Cutline
+# Cutline
 
 skel-test: skel-build update test codestyle skel-reset
 

@@ -8,7 +8,7 @@ This is not a completed library, but only a blank.
 It aims to clean up the minds of programmers and standardize the development of open-source libraries for JBZoo.
 
 
-### Action plan
+### Action items
 
  * Create a new repository (MIT, without .gitignore).
  * Make a checkout of a clean repository for a working machine.
