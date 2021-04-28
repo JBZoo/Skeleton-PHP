@@ -26,3 +26,11 @@ update: ##@Project Install/Update all 3rd party dependencies
 test-all: ##@Project Run all project tests at once
 	@make test
 	@make codestyle
+
+
+test-local:
+	@git reset --hard
+	@php `pwd`/create-new-project.php Skeleton-Php
+	@make update
+	@make test codestyle
+	@git reset --hard
