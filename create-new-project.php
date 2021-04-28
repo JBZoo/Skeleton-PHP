@@ -116,6 +116,10 @@ foreach ($list as $file) {
         $content = str_replace("  - php `pwd`/create-new-project.php Skeleton-Php\n", '', $content);
     }
 
+    if (strpos($file, 'main.yml')) {
+        $content = str_replace('skel-build ', '', $content);
+    }
+
     file_put_contents($file, $content);
 }
 
