@@ -28,13 +28,15 @@ test-all: ##@Project Run all project tests at once
 	@make codestyle
 
 
-local-test:
-	@make local-reset
-	@make update
-	@make test codestyle
-	@git reset --hard
+#### Cutline
+
+skel-test: skel-build update test codestyle skel-reset
 
 
-local-reset:
-	@git reset --hard
+skel-build:
+	@make skel-reset
 	@php `pwd`/create-new-project.php Skeleton-Php
+
+
+skel-reset:
+	@git reset --hard
