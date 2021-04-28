@@ -57,7 +57,9 @@ jobs:
 
       - name: Build the Project
         continue-on-error: ${{ matrix.experimental }}
-        run: make update --no-print-directory
+        run: |
+          - php `pwd`/create-new-project.php Skeleton-Php
+          - make update --no-print-directory
 
       - name: 🧪 PHPUnit Tests
         continue-on-error: ${{ matrix.experimental }}
@@ -94,7 +96,9 @@ jobs:
 
       - name: Build the Project
         continue-on-error: ${{ matrix.experimental }}
-        run: make update --no-print-directory
+        run: |
+          - php `pwd`/create-new-project.php Skeleton-Php
+          - make update --no-print-directory
 
       - name: 👍 Code Quality
         continue-on-error: ${{ matrix.experimental }}
@@ -131,7 +135,9 @@ jobs:
 
       - name: Build the Project
         continue-on-error: ${{ matrix.experimental }}
-        run: make update --no-print-directory
+        run: |
+          - php `pwd`/create-new-project.php Skeleton-Php
+          - make update --no-print-directory
 
       - name: 📝 Build Reports
         continue-on-error: ${{ matrix.experimental }}
