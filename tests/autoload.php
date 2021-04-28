@@ -13,6 +13,8 @@
  * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
+declare(strict_types=1);
+
 // main autoload
 if ($autoload = dirname(__DIR__) . '/vendor/autoload.php') {
     require_once $autoload;

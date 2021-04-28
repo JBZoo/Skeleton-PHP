@@ -13,6 +13,8 @@
  * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
+declare(strict_types=1);
+
 namespace JBZoo\PHPUnit;
 
 /**
@@ -25,5 +27,6 @@ class __NS__CopyrightTest extends AbstractCopyrightTest
     /**
      * @var string
      */
-    protected $packageName = '__PACKAGE__';
+    protected $packageName     = '__PACKAGE__';
+    protected $isPhpStrictType = true;
 }

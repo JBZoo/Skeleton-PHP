@@ -1,19 +1,21 @@
 <?php
 
 /**
- * JBZoo Toolbox - Composer-Graph
+ * JBZoo Toolbox - __PACKAGE__
  *
  * This file is part of the JBZoo Toolbox project.
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @package    Composer-Graph
+ * @package    __PACKAGE__
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @link       https://github.com/JBZoo/Composer-Graph
+ * @link       https://github.com/JBZoo/__PACKAGE__
  */
 
-$packageName = isset($GLOBALS["argv"][1]) ? $GLOBALS["argv"][1] : 'Testing';
+declare(strict_types=1);
+
+$packageName = $GLOBALS["argv"][1] ?? 'Testing';
 
 if (!$packageName || $packageName === '__CHANGE_ME__') {
     echo 'Undefined package name! Plz, check config' . PHP_EOL;
@@ -87,7 +89,6 @@ function getFileList($dir, $filter = null, &$results = [])
             } else {
                 $results[] = realpath($path);
             }
-
         } elseif (is_dir($path) && !in_array($value, $config['exclude'], true)) {
             getFileList($path, $filter, $results);
         }
