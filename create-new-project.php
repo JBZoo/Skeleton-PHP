@@ -28,7 +28,7 @@ $namespace = str_replace('-', '', $packageName);
 global $config;
 
 $config = [
-    'root'    => realpath('.'),
+    'root'    => realpath(__DIR__),
     'exclude' => [
         '.',
         '..',
@@ -53,11 +53,11 @@ $config = [
  * @param $path
  * @return null|string
  */
-function openFile($path)
+function openFile($path): ?string
 {
     $contents = null;
 
-    if ($realPath = realpath($path)) {
+    if (realpath($path)) {
         $handle = fopen($path, "rb");
         $contents = fread($handle, filesize($path));
         fclose($handle);
@@ -72,7 +72,7 @@ function openFile($path)
  * @param array $results
  * @return array
  */
-function getFileList($dir, $filter = null, &$results = [])
+function getFileList($dir, $filter = null, &$results = []): array
 {
     $files = scandir($dir);
 
