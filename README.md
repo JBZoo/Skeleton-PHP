@@ -1,7 +1,7 @@
 # JBZoo - Skeleton (PHP)
 
 
-[![Build Status](https://travis-ci.org/JBZoo/Skeleton-Php.svg?branch=master)](https://travis-ci.org/JBZoo/Skeleton-Php)    [![GitHub Issues](https://img.shields.io/github/issues/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/issues)    [![GitHub License](https://img.shields.io/github/license/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/blob/master/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/issues)    [![GitHub License](https://img.shields.io/github/license/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/blob/master/LICENSE)
 
 
 This is not a completed library, but only a blank.
