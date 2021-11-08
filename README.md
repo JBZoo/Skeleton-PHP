@@ -1,7 +1,6 @@
 # JBZoo - Skeleton (PHP)
 
-
-[![GitHub Issues](https://img.shields.io/github/issues/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/issues)    [![GitHub License](https://img.shields.io/github/license/JBZoo/Skeleton-Php)](https://github.com/JBZoo/Skeleton-Php/blob/master/LICENSE)
+[![CI](https://github.com/JBZoo/Skeleton-PHP/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/Skeleton-PHP/actions/workflows/main.yml?query=branch%3Amaster)
 
 
 This is not a completed library, but only a blank.
