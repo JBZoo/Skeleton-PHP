@@ -28,4 +28,14 @@ class __NS__ReadmeTest extends AbstractReadmeTest
      * @var string
      */
     protected $packageName = '__PACKAGE__';
+
+    /**
+     * @inheritDoc
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->params['travis'] = false;
+    }
 }
