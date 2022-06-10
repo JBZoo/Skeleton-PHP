@@ -24,5 +24,4 @@ namespace JBZoo\PHPUnit;
  */
 class __NS__CodestyleTest extends AbstractCodestyleTest
 {
-
 }

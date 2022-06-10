@@ -24,9 +24,6 @@ namespace JBZoo\PHPUnit;
  */
 class __NS__CopyrightTest extends AbstractCopyrightTest
 {
-    /**
-     * @var string
-     */
     protected $packageName     = '__PACKAGE__';
     protected $isPhpStrictType = true;
 }

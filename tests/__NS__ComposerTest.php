@@ -24,5 +24,4 @@ namespace JBZoo\PHPUnit;
  */
 class __NS__ComposerTest extends AbstractComposerTest
 {
-
 }
