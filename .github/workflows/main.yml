@@ -20,7 +20,7 @@ on:
     branches:
       - 'master'
   schedule:
-    - cron: '7 */8 * * *'
+    - cron: '55 */8 * * *'
 
 env:
   COLUMNS: 120
