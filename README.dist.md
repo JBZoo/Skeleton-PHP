@@ -1,7 +1,8 @@
 # JBZoo / __PACKAGE__
 
-[![Coverage Status](https://coveralls.io/repos/JBZoo/__PACKAGE__/badge.svg)](https://coveralls.io/github/JBZoo/__PACKAGE__)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/__PACKAGE__/coverage.svg)](https://shepherd.dev/github/JBZoo/__PACKAGE__)    
-[![Stable Version](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/version)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__)    [![Latest Unstable Version](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/v/unstable)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__)    [![Dependents](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/dependents)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__/dependents?order_by=downloads)    [![GitHub Issues](https://img.shields.io/github/issues/jbzoo/__PACKAGE_LOW__)](https://github.com/JBZoo/__PACKAGE__/issues)    [![Total Downloads](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/downloads)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__/stats)    [![GitHub License](https://img.shields.io/github/license/jbzoo/__PACKAGE_LOW__)](https://github.com/JBZoo/__PACKAGE__/blob/master/LICENSE)
+[![CI](https://github.com/JBZoo/__PACKAGE__/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/JBZoo/__PACKAGE__/actions/workflows/main.yml?query=branch%3Amaster)    [![Coverage Status](https://coveralls.io/repos/github/JBZoo/__PACKAGE__/badge.svg?branch=master)](https://coveralls.io/github/JBZoo/__PACKAGE__?branch=master)    [![Psalm Coverage](https://shepherd.dev/github/JBZoo/__PACKAGE__/coverage.svg)](https://shepherd.dev/github/JBZoo/__PACKAGE__)    [![Psalm Level](https://shepherd.dev/github/JBZoo/__PACKAGE__/level.svg)](https://shepherd.dev/github/JBZoo/__PACKAGE__)    [![CodeFactor](https://www.codefactor.io/repository/github/jbzoo/__PACKAGE_LOW__/badge)](https://www.codefactor.io/repository/github/jbzoo/__PACKAGE_LOW__/issues)    
+[![Stable Version](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/version)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__/)    [![Total Downloads](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/downloads)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__/stats)    [![Dependents](https://poser.pugx.org/jbzoo/__PACKAGE_LOW__/dependents)](https://packagist.org/packages/jbzoo/__PACKAGE_LOW__/dependents?order_by=downloads)    [![Visitors](https://visitor-badge.glitch.me/badge?page_id=jbzoo.__PACKAGE_LOW__)]()    [![GitHub License](https://img.shields.io/github/license/jbzoo/__PACKAGE_LOW__)](https://github.com/JBZoo/__PACKAGE__/blob/master/LICENSE)
+
 
 
 
@@ -15,7 +16,7 @@ composer require jbzoo/__PACKAGE_LOW__
 ### Usage
 
 ```php
-use JBZoo\SkeletonPhp\__PACKAGE__;
+use JBZoo\__NS__\__PACKAGE__;
 
 // Just use it!
 $object = new __PACKAGE__();
