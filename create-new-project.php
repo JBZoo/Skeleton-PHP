@@ -9,7 +9,7 @@
  *
  * @license    MIT
  * @copyright  Copyright (C) JBZoo.com, All rights reserved.
- * @see       https://github.com/JBZoo/__PACKAGE__
+ * @see        https://github.com/JBZoo/__PACKAGE__
  */
 
 declare(strict_types=1);
@@ -115,13 +115,11 @@ foreach ($list as $file) {
 // Change Readme file
 
 $map = [
-    'src/__NS__.php'                => "src/{$namespace}.php",
-    'tests/__NS__Test.php'          => "tests/{$namespace}Test.php",
-    'tests/__NS__CodestyleTest.php' => "tests/{$namespace}CodestyleTest.php",
-    'tests/__NS__CopyrightTest.php' => "tests/{$namespace}CopyrightTest.php",
-    'tests/__NS__ReadmeTest.php'    => "tests/{$namespace}ReadmeTest.php",
-    'tests/__NS__ComposerTest.php'  => "tests/{$namespace}ComposerTest.php",
-    '/README.dist.md'               => 'README.md',
+    'src/__NS__.php'                    => "src/{$namespace}.php",
+    'tests/__NS__Test.php'              => "tests/{$namespace}Test.php",
+    'tests/__NS__PackageTest.php'       => "tests/{$namespace}PackageTest.php",
+    'tests/__NS__PhpStormProxyTest.php' => "tests/{$namespace}PhpStormProxyTest.php",
+    '/README.dist.md'                   => 'README.md',
 ];
 
 foreach ($map as $oldName => $newName) {
