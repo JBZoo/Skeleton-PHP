@@ -20,7 +20,7 @@ use JBZoo\__NS__\__NS__;
 
 final class __NS__Test extends PHPUnit
 {
-    public function testShouldDoSomeStreetMagic()
+    public function testShouldDoSomeStreetMagic(): void
     {
         $obj = new __NS__();
         isSame('street magic', $obj->doSomeStreetMagic());

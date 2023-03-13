@@ -16,7 +16,7 @@ declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-final class __NS__PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
+final class __NS__CodestyleTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
 {
     protected string $packageName = '__NS__';
 }
