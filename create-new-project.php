@@ -45,7 +45,7 @@ $config = [
     ],
 ];
 
-function openFile($path): ?string
+function openFile(string $path): ?string
 {
     $contents = null;
 
@@ -58,28 +58,19 @@ function openFile($path): ?string
     return $contents;
 }
 
-/**
- * @param null $filter
- */
-function getFileList(string $dir, $filter = null, array &$results = []): array
+function getFileList(string $dir, array &$results = []): array
 {
     $files = \scandir($dir);
 
     global $config;
 
-    foreach ($files as $key => $value) {
+    foreach ($files as $value) {
         $path = $dir . \DIRECTORY_SEPARATOR . $value;
 
         if (!\is_dir($path) && !\in_array($value, $config['exclude'], true)) {
-            if ($filter) {
-                if (\preg_match('#' . $filter . '#iu', $path)) {
-                    $results[] = \realpath($path);
-                }
-            } else {
-                $results[] = \realpath($path);
-            }
+            $results[] = \realpath($path);
         } elseif (\is_dir($path) && !\in_array($value, $config['exclude'], true)) {
-            getFileList($path, $filter, $results);
+            getFileList($path, $results);
         }
     }
 
@@ -99,10 +90,6 @@ foreach ($list as $file) {
     if (\strpos($content, '# Cutline')) {
         $regexp  = '/\n# Cutline.*/ius';
         $content = \preg_replace($regexp, '', $content);
-    }
-
-    if (\strpos($file, '.travis.yml')) {
-        $content = \str_replace("  - php `pwd`/create-new-project.php Skeleton-Php\n", '', $content);
     }
 
     if (\strpos($file, 'main.yml')) {
