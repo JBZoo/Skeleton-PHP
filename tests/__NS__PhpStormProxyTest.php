@@ -16,13 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\PHPUnit;
 
-use JBZoo\__NS__\__NS__;
-
-final class __NS__Test extends PHPUnit
+final class __NS__PhpStormProxyTest extends \JBZoo\Codestyle\PHPUnit\AbstractPhpStormProxyTest
 {
-    public function testShouldDoSomeStreetMagic()
-    {
-        $obj = new __NS__();
-        isSame('street magic', $obj->doSomeStreetMagic());
-    }
 }
