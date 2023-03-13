@@ -32,7 +32,6 @@ skel-test: skel-build update test codestyle skel-reset
 
 
 skel-build:
-	@make skel-reset
 	@php `pwd`/create-new-project.php Skeleton-Php
 
 
