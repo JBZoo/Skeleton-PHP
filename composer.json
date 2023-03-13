@@ -1,10 +1,13 @@
 {
-    "name"         : "jbzoo/skeleton-php",
-    "type"         : "library",
-    "description"  : "__DESCRIPTION__",
-    "license"      : "MIT",
+    "name"              : "jbzoo/skeleton-php",
+    "type"              : "library",
+    "description"       : "__DESCRIPTION__",
+    "license"           : "MIT",
+    "keywords" : [
+        "jbzoo"
+    ],
 
-    "authors"      : [
+    "authors"           : [
         {
             "name"  : "Denis Smetannikov",
             "email" : "admin@jbzoo.com",
@@ -12,31 +15,33 @@
         }
     ],
 
-    "require"      : {
-        "php" : ">=7.4"
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+
+    "require"           : {
+        "php" : "^8.1"
     },
 
-    "require-dev"  : {
-        "jbzoo/toolbox-dev" : "^4.0.1"
+    "require-dev"       : {
+        "jbzoo/toolbox-dev" : "7.x-dev"
     },
 
-    "autoload"     : {
-        "psr-4" : {
-            "JBZoo\\__NS__\\" : "src"
-        }
+    "autoload"          : {
+        "psr-4" : {"JBZoo\\__NS__\\" : "src"}
     },
 
-    "autoload-dev" : {
-        "classmap" : ["tests"]
+    "autoload-dev"      : {
+        "psr-4" : {"JBZoo\\PHPUnit\\" : "tests"}
     },
 
-    "config"       : {
-        "optimize-autoloader" : true
+    "config"            : {
+        "optimize-autoloader" : true,
+        "allow-plugins"       : {"composer/package-versions-deprecated" : true}
     },
 
-    "extra"        : {
+    "extra"             : {
         "branch-alias" : {
-            "dev-master" : "1.x-dev"
+            "dev-master" : "7.x-dev"
         }
     }
 }
