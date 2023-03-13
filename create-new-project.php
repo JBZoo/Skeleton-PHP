@@ -15,7 +15,7 @@
 
 declare(strict_types=1);
 
-$packageName = $GLOBALS["argv"][1] ?? 'Testing';
+$packageName = $GLOBALS["argv"][1] ?? null;
 
 if (!$packageName || $packageName === '__CHANGE_ME__') {
     echo 'Undefined package name! Plz, check config' . PHP_EOL;
@@ -67,12 +67,12 @@ function openFile($path): ?string
 }
 
 /**
- * @param       $dir
- * @param null  $filter
- * @param array $results
+ * @param string $dir
+ * @param null   $filter
+ * @param array  $results
  * @return array
  */
-function getFileList($dir, $filter = null, &$results = []): array
+function getFileList(string $dir, $filter = null, array &$results = []): array
 {
     $files = scandir($dir);
 
