@@ -18,5 +18,5 @@ namespace JBZoo\PHPUnit;
 
 final class __NS__PackageTest extends \JBZoo\Codestyle\PHPUnit\AbstractPackageTest
 {
-    protected string $packageName = '__NS__';
+    protected string $packageName = '__PACKAGE__';
 }
