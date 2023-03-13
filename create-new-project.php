@@ -45,6 +45,8 @@ $config = [
     ],
 ];
 
+\print_r($config);
+
 function openFile(string $path): ?string
 {
     $contents = null;
