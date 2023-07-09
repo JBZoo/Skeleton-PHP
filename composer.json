@@ -23,7 +23,7 @@
     },
 
     "require-dev"       : {
-m        "jbzoo/toolbox-dev" : "^7.0"
+        "jbzoo/toolbox-dev" : "^7.0"
     },
 
     "autoload"          : {
