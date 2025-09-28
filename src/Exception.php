@@ -16,6 +16,6 @@ declare(strict_types=1);
 
 namespace JBZoo\__NS__;
 
-class Exception extends \RuntimeException
+final class Exception extends \RuntimeException
 {
 }
