@@ -116,7 +116,8 @@ foreach ($map as $oldName => $newName) {
 }
 
 // Self-destruction
-@\unlink(__FILE__);
+\unlink(__DIR__ . '/CLAUDE.md');
+\unlink(__FILE__);
 
 // Success
 echo $packageName . ' is ready!' . \PHP_EOL;
